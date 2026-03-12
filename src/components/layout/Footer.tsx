@@ -29,7 +29,7 @@ export function Footer() {
               className="inline-block hover:opacity-80 transition-opacity"
             >
               <Image
-                src="/images/logo.png"
+                src="/images/logo-white.png"
                 alt="Brummbooo Driving Society"
                 width={150}
                 height={98}

@@ -15,18 +15,23 @@ export async function POST(request: NextRequest) {
     const inquiryTypeLabel =
       INQUIRY_TYPE_LABELS[data.inquiryType as keyof typeof INQUIRY_TYPE_LABELS];
 
-    if (
-      process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID &&
-      process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID !== 'demo'
-    ) {
-      const { collection, addDoc, Timestamp } = await import('firebase/firestore');
-      const { getDb } = await import('@/lib/firebase');
-      const db = getDb();
-      await addDoc(collection(db, 'contacts'), {
-        ...data,
-        status: 'new',
-        createdAt: Timestamp.now(),
-      });
+    // Save to Firebase
+    try {
+      if (
+        process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID &&
+        process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID !== 'demo'
+      ) {
+        const { collection, addDoc, Timestamp } = await import('firebase/firestore');
+        const { getDb } = await import('@/lib/firebase');
+        const db = getDb();
+        await addDoc(collection(db, 'contacts'), {
+          ...data,
+          status: 'new',
+          createdAt: Timestamp.now(),
+        });
+      }
+    } catch (firebaseError) {
+      console.error('Firebase error:', firebaseError);
     }
 
     const emailContent = `
@@ -48,23 +53,30 @@ ${data.organization || '未入力'}
 ${data.message}
     `.trim();
 
+    // Send email via Resend
     if (resend && process.env.CONTACT_EMAIL) {
-      await resend.emails.send({
-        from: 'BrummBooo Driving Society <noreply@brummbooo.auto>',
-        to: process.env.CONTACT_EMAIL,
-        reply_to: data.email,
-        subject: `【お問い合わせ】${inquiryTypeLabel} - ${data.name}`,
-        text: emailContent,
-      });
+      try {
+        await resend.emails.send({
+          from: 'BrummBooo Driving Society <onboarding@resend.dev>',
+          to: process.env.CONTACT_EMAIL,
+          reply_to: data.email,
+          subject: `【お問い合わせ】${inquiryTypeLabel} - ${data.name}`,
+          text: emailContent,
+        });
+      } catch (emailError) {
+        console.error('Resend email error:', emailError);
+        // Continue even if email fails - the contact is saved to Firebase
+      }
     } else {
-      console.log('Email would be sent:', emailContent);
+      console.log('Resend not configured. RESEND_API_KEY:', !!process.env.RESEND_API_KEY, 'CONTACT_EMAIL:', !!process.env.CONTACT_EMAIL);
+      console.log('Email content:', emailContent);
     }
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(
-      { error: 'Failed to send message' },
+      { error: 'Failed to send message', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
   }

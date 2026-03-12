@@ -57,7 +57,7 @@ ${data.message}
     if (resend && process.env.CONTACT_EMAIL) {
       try {
         await resend.emails.send({
-          from: 'BrummBooo Driving Society <onboarding@resend.dev>',
+          from: 'BrummBooo Driving Society <noreply@allcompass.jp>',
           to: process.env.CONTACT_EMAIL,
           reply_to: data.email,
           subject: `【お問い合わせ】${inquiryTypeLabel} - ${data.name}`,

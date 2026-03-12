@@ -19,7 +19,7 @@ export const aboutContent = {
       title: '私たちの考え',
       content: `私たちは、クルマ文化を未来へつないでいくためには、まずその入口となる原体験を子どもたちの身近なところに取り戻す必要があると考えました。
 
-Brummbooo Driving Society は、そのために生まれた社会活動です。`,
+Brummbooo Driving Society は、そのために生まれたプロジェクトです。`,
     },
     {
       id: 'our-activity',

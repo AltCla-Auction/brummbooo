@@ -6,7 +6,7 @@ import { Container, Section, PageHeader } from '@/components/ui';
 export const metadata: Metadata = {
   title: '団体概要',
   description:
-    'Brummbooo Driving Society の団体概要。クルマ文化の原体験を次の世代へつなぐ社会活動です。',
+    'Brummbooo Driving Society の団体概要。クルマ文化の原体験を次の世代へつなぐプロジェクトです。',
 };
 
 const orgInfo = [
@@ -55,7 +55,7 @@ export default function OrganizationPage() {
           <div className="prose-article">
             <p className="text-gray-600 leading-relaxed">
               Brummbooo Driving Society
-              は、クルマ文化の原体験を次の世代へつなぐために設立された社会活動です。
+              は、クルマ文化の原体験を次の世代へつなぐために設立されたプロジェクトです。
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               中心となる活動は「クルマのおもちゃリレープロジェクト」です。家庭で遊び終わったクルマのおもちゃを集め、幼稚園や保育園、学童や児童館へお届けしています。
@@ -111,7 +111,7 @@ export default function OrganizationPage() {
             </a>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            ※ Brummbooo Driving Society は非営利の社会活動です。上記サービスの宣伝を目的としたものではありません。
+            ※ Brummbooo Driving Society は非営利のプロジェクトです。上記サービスの宣伝を目的としたものではありません。
           </p>
         </Container>
       </Section>

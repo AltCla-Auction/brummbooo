@@ -7,13 +7,13 @@ export function AboutBrummbooo() {
       <Container>
         <SectionHeader
           title="Brummbooo Driving Society とは"
-          subtitle="子どもたちにクルマ文化との原体験を届ける社会活動団体です。"
+          subtitle="子どもたちにクルマ文化との原体験を届けるプロジェクトです。"
         />
 
         <div className="max-w-3xl mx-auto">
           <div className="prose prose-lg text-gray-700 leading-relaxed space-y-6">
             <p>
-              Brummbooo Driving Society（ブルンブー・ドライビング・ソサエティ）は、クルマ文化を次の世代へつないでいくことを目的とした社会活動団体です。
+              Brummbooo Driving Society（ブルンブー・ドライビング・ソサエティ）は、クルマ文化を次の世代へつないでいくことを目的としたプロジェクトです。
             </p>
             <p>
               子どもたちがクルマのおもちゃを手に取り、「ブーブー」と言いながら遊ぶ。その何気ない原体験が、将来のクルマ好きを育て、クルマ文化そのものを支える力になると私たちは考えています。

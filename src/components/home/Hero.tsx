@@ -24,7 +24,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-cyan-100 leading-relaxed">
-              Brummbooo Driving Society（ブルンブー・ドライビング・ソサエティ）は、クルマ文化を次世代につなぐ社会活動団体です。
+              Brummbooo Driving Society（ブルンブー・ドライビング・ソサエティ）は、クルマ文化を次世代につなぐプロジェクトです。
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">

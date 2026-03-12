@@ -6,7 +6,7 @@ import { aboutContent } from '@/content/about';
 export const metadata: Metadata = {
   title: '設立趣旨',
   description:
-    'Brummbooo Driving Society の設立趣旨。クルマ文化の原体験を、次の世代へつなぐために生まれた社会活動です。',
+    'Brummbooo Driving Society の設立趣旨。クルマ文化の原体験を、次の世代へつなぐために生まれたプロジェクトです。',
 };
 
 export default function AboutPage() {

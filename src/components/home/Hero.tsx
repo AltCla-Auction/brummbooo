@@ -20,7 +20,9 @@ export function Hero() {
         <div className="py-16 sm:py-24 lg:py-32">
           <div className="max-w-2xl">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
-              クルマ文化の原体験を、<span className="text-cyan-200">次の世代へ。</span>
+              クルマ文化の原体験を、
+              <br />
+              <span className="text-cyan-200">次の世代へ。</span>
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-cyan-100 leading-relaxed">

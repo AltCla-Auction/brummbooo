@@ -224,7 +224,7 @@ export default function RecipientsPage() {
             <p className="text-cyan-100 mb-8 max-w-xl mx-auto">
               おもちゃの提供をご希望の施設の方は、お問い合わせフォームよりお申し込みください。
             </p>
-            <Button as="link" href="/contact" size="lg">
+            <Button as="link" href="/contact" size="lg" className="!bg-white !text-cyan-700 hover:!bg-cyan-50">
               お問い合わせ
             </Button>
           </div>

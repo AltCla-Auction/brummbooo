@@ -203,13 +203,13 @@ export default function ProjectPage() {
               さまざまな形でこの活動にご参加いただけます。
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button as="link" href="/relay-box">
+              <Button as="link" href="/relay-box" className="!bg-white !text-cyan-700 hover:!bg-cyan-50">
                 リレーボックスを設置する
               </Button>
-              <Button as="link" href="/recipients" variant="outline">
+              <Button as="link" href="/recipients" variant="outline" className="!border-white !text-white hover:!bg-white/10">
                 提供先として申し込む
               </Button>
-              <Button as="link" href="/contact" variant="ghost">
+              <Button as="link" href="/contact" variant="ghost" className="!text-white hover:!bg-white/10">
                 お問い合わせ
               </Button>
             </div>

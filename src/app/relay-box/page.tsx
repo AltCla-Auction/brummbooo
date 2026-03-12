@@ -260,7 +260,7 @@ export default function RelayBoxPage() {
             <p className="text-cyan-100 mb-8 max-w-xl mx-auto">
               リレーボックスの設置にご興味をお持ちいただけましたら、お気軽にお問い合わせください。設置条件や詳細についてご案内いたします。
             </p>
-            <Button as="link" href="/contact" size="lg">
+            <Button as="link" href="/contact" size="lg" className="!bg-white !text-cyan-700 hover:!bg-cyan-50">
               お問い合わせ
             </Button>
           </div>

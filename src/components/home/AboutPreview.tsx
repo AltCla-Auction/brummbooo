@@ -18,7 +18,7 @@ export function AboutPreview() {
             </p>
           </div>
 
-          <Button as="link" href="/about" variant="outline" className="border-white text-white hover:bg-white/10">
+          <Button as="link" href="/about" variant="outline" className="!border-white !text-white hover:!bg-white/10">
             設立趣旨を読む
           </Button>
         </div>

@@ -30,7 +30,9 @@ export default function AboutPage() {
             <header className="mb-12 sm:mb-16">
               <p className="text-accent font-medium mb-4">{aboutContent.title}</p>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                {aboutContent.lead}
+                クルマ文化の原体験を、
+                <br />
+                <span className="text-accent">次の世代へ。</span>
               </h1>
             </header>
 

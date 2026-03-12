@@ -106,7 +106,7 @@ export default function ProjectPage() {
 
       <Section variant="accent" padding="lg">
         <Container>
-          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-accent mb-12">
             プロジェクトの流れ
           </h2>
 
@@ -139,7 +139,7 @@ export default function ProjectPage() {
       <Section padding="lg">
         <Container size="md">
           <div className="bg-gradient-to-br from-cyan-50 to-cyan-100/80 rounded-2xl p-8 sm:p-12">
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl sm:text-2xl font-bold text-accent mb-4">
               対象となるおもちゃ
             </h2>
             <ul className="space-y-3 text-gray-600">

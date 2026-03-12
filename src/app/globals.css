@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply text-gray-900 bg-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .prose-article {
+    @apply text-gray-700 leading-relaxed;
+  }
+
+  .prose-article h2 {
+    @apply text-2xl font-bold text-accent mt-12 mb-6;
+  }
+
+  .prose-article h3 {
+    @apply text-xl font-semibold text-gray-900 mt-8 mb-4;
+  }
+
+  .prose-article p {
+    @apply mb-6;
+  }
+
+  .prose-article ul,
+  .prose-article ol {
+    @apply mb-6 pl-6;
+  }
+
+  .prose-article li {
+    @apply mb-2;
+  }
+
+  .prose-article img {
+    @apply rounded-lg my-8;
+  }
+
+  .prose-article a {
+    @apply text-accent underline hover:no-underline;
+  }
+
+  .prose-article blockquote {
+    @apply border-l-4 border-accent/30 pl-6 py-2 my-6 text-gray-600 italic;
+  }
+
+  .rich-text img {
+    @apply max-w-full h-auto rounded-lg my-6;
+  }
+
+  .rich-text h2 {
+    @apply text-xl font-bold text-gray-900 mt-8 mb-4;
+  }
+
+  .rich-text h3 {
+    @apply text-lg font-semibold text-gray-900 mt-6 mb-3;
+  }
+
+  .rich-text p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  .rich-text ul,
+  .rich-text ol {
+    @apply mb-4 pl-6;
+  }
+
+  .rich-text li {
+    @apply mb-2;
+  }
+
+  .rich-text a {
+    @apply text-accent underline hover:no-underline;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}

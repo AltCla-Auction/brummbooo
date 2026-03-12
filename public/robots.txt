@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brummbooo.auto/sitemap.xml

@@ -28,10 +28,10 @@ export function Hero() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button as="link" href="#about-brummbooo" size="lg" className="bg-white text-cyan-700 hover:bg-cyan-50">
+              <Button as="link" href="#about-brummbooo" size="lg" className="!bg-white !text-cyan-700 hover:!bg-cyan-50">
                 Brummboooとは
               </Button>
-              <Button as="link" href="/project" variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+              <Button as="link" href="/project" variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
                 プロジェクトを見る
               </Button>
             </div>

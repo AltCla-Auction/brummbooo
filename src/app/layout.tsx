@@ -5,8 +5,8 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://brummbooo.autos'),
   title: {
-    default: 'Brummbooo Driving Society | クルマ文化の原体験を、次の世代へ',
-    template: '%s | Brummbooo Driving Society',
+    default: 'BrummBooo Driving Society | クルマ文化の原体験を、次の世代へ',
+    template: '%s | BrummBooo Driving Society',
   },
   description:
     '家庭で遊び終わったクルマのおもちゃを集め、幼稚園や保育園へ届けるプロジェクトです。クルマ文化の原体験を、次の世代へつなぎます。',
@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     '保育園',
     'クルマ文化',
   ],
-  authors: [{ name: 'Brummbooo Driving Society' }],
+  authors: [{ name: 'BrummBooo Driving Society' }],
   openGraph: {
     type: 'website',
     locale: 'ja_JP',
     url: 'https://brummbooo.autos',
-    siteName: 'Brummbooo Driving Society',
-    title: 'Brummbooo Driving Society | クルマ文化の原体験を、次の世代へ',
+    siteName: 'BrummBooo Driving Society',
+    title: 'BrummBooo Driving Society | クルマ文化の原体験を、次の世代へ',
     description:
       '家庭で遊び終わったクルマのおもちゃを集め、幼稚園や保育園へ届けるプロジェクトです。',
     images: [
@@ -33,13 +33,13 @@ export const metadata: Metadata = {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Brummbooo Driving Society',
+        alt: 'BrummBooo Driving Society',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Brummbooo Driving Society',
+    title: 'BrummBooo Driving Society',
     description:
       '家庭で遊び終わったクルマのおもちゃを集め、幼稚園や保育園へ届けるプロジェクトです。',
     images: ['/images/og-image.jpg'],

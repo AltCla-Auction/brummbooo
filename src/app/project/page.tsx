@@ -91,7 +91,7 @@ export default function ProjectPage() {
         <Container size="md">
           <div className="prose-article">
             <p className="text-lg text-gray-700 leading-relaxed">
-              クルマのおもちゃリレープロジェクトは、Brummbooo Driving Society
+              クルマのおもちゃリレープロジェクトは、BrummBooo Driving Society
               の中心となる活動です。
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">

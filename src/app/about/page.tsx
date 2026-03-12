@@ -6,7 +6,7 @@ import { aboutContent } from '@/content/about';
 export const metadata: Metadata = {
   title: '設立趣旨',
   description:
-    'Brummbooo Driving Society の設立趣旨。クルマ文化の原体験を、次の世代へつなぐために生まれたプロジェクトです。',
+    'BrummBooo Driving Society の設立趣旨。クルマ文化の原体験を、次の世代へつなぐために生まれたプロジェクトです。',
 };
 
 export default function AboutPage() {
@@ -57,7 +57,7 @@ export default function AboutPage() {
 
             <footer className="mt-16 sm:mt-20 pt-8 border-t border-gray-200">
               <p className="text-sm text-gray-500 text-center">
-                Brummbooo Driving Society
+                BrummBooo Driving Society
               </p>
             </footer>
           </div>

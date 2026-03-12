@@ -51,7 +51,7 @@ export default function AdminLayout({
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-8">
               <Link href="/admin" className="font-bold text-accent">
-                Brummbooo 管理
+                BrummBooo 管理
               </Link>
               <nav className="hidden md:flex items-center gap-1">
                 {adminNavItems.map((item) => (

@@ -6,11 +6,11 @@ import { Container, Section, PageHeader } from '@/components/ui';
 export const metadata: Metadata = {
   title: '団体概要',
   description:
-    'Brummbooo Driving Society の団体概要。クルマ文化の原体験を次の世代へつなぐプロジェクトです。',
+    'BrummBooo Driving Society の団体概要。クルマ文化の原体験を次の世代へつなぐプロジェクトです。',
 };
 
 const orgInfo = [
-  { label: '団体名', value: 'Brummbooo Driving Society' },
+  { label: '団体名', value: 'BrummBooo Driving Society' },
   { label: '設立目的', value: 'クルマ文化の原体験を、次の世代へつなぐ' },
   {
     label: '主な活動',
@@ -24,7 +24,7 @@ export default function OrganizationPage() {
     <>
       <PageHeader
         title="団体概要"
-        description="Brummbooo Driving Society について"
+        description="BrummBooo Driving Society について"
       />
 
       <Section padding="lg">
@@ -54,7 +54,7 @@ export default function OrganizationPage() {
           </h2>
           <div className="prose-article">
             <p className="text-gray-600 leading-relaxed">
-              Brummbooo Driving Society
+              BrummBooo Driving Society
               は、クルマ文化の原体験を次の世代へつなぐために設立されたプロジェクトです。
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
@@ -79,7 +79,7 @@ export default function OrganizationPage() {
         <Container size="md">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">関連ブランド</h2>
           <p className="text-gray-600 mb-6">
-            Brummbooo Driving Society
+            BrummBooo Driving Society
             は、以下のブランド・サービスと連携して活動を行っています。
           </p>
           <div className="max-w-sm">
@@ -111,7 +111,7 @@ export default function OrganizationPage() {
             </a>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            ※ Brummbooo Driving Society は非営利のプロジェクトです。上記サービスの宣伝を目的としたものではありません。
+            ※ BrummBooo Driving Society は非営利のプロジェクトです。上記サービスの宣伝を目的としたものではありません。
           </p>
         </Container>
       </Section>
@@ -121,7 +121,7 @@ export default function OrganizationPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-8">事務局について</h2>
           <div className="prose-article">
             <p className="text-gray-600 leading-relaxed">
-              Brummbooo Driving Society の事務局運営は、オールコンパス株式会社が担当しています。
+              BrummBooo Driving Society の事務局運営は、オールコンパス株式会社が担当しています。
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               お問い合わせやご相談は、<Link

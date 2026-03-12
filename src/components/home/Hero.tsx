@@ -24,12 +24,12 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-cyan-100 leading-relaxed">
-              Brummbooo Driving Society（ブルンブー・ドライビング・ソサエティ）は、クルマ文化を次世代につなぐプロジェクトです。
+              BrummBooo Driving Society（ブルンブー・ドライビング・ソサエティ）は、クルマ文化を次世代につなぐプロジェクトです。
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button as="link" href="#about-brummbooo" size="lg" className="!bg-white !text-cyan-700 hover:!bg-cyan-50">
-                Brummboooとは
+                BrummBoooとは
               </Button>
               <Button as="link" href="/project" variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
                 プロジェクトを見る

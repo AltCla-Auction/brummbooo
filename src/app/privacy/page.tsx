@@ -3,7 +3,7 @@ import { Container, Section, PageHeader } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: 'プライバシーポリシー',
-  description: 'Brummbooo Driving Society のプライバシーポリシー',
+  description: 'BrummBooo Driving Society のプライバシーポリシー',
 };
 
 export default function PrivacyPage() {
@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         <Container size="sm">
           <div className="prose-article">
             <p className="text-gray-600 leading-relaxed">
-              Brummbooo Driving
+              BrummBooo Driving
               Society（以下「当団体」）は、お預かりする個人情報の重要性を認識し、
               以下のとおりプライバシーポリシーを定め、個人情報の保護に努めます。
             </p>

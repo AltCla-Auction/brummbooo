@@ -18,7 +18,7 @@ export function Header() {
           >
             <Image
               src="/images/logo.png"
-              alt="Brummbooo Driving Society"
+              alt="BrummBooo Driving Society"
               width={180}
               height={117}
               className="h-10 sm:h-12 w-auto"

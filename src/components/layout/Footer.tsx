@@ -30,7 +30,7 @@ export function Footer() {
             >
               <Image
                 src="/images/logo-white.png"
-                alt="Brummbooo Driving Society"
+                alt="BrummBooo Driving Society"
                 width={150}
                 height={98}
                 className="h-10 w-auto"
@@ -102,7 +102,7 @@ export function Footer() {
               事務局：オールコンパス株式会社
             </p>
             <p className="text-xs text-cyan-300">
-              © {new Date().getFullYear()} Brummbooo Driving Society
+              © {new Date().getFullYear()} BrummBooo Driving Society
             </p>
           </div>
         </div>

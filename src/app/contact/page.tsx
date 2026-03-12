@@ -6,7 +6,7 @@ import { ContactForm } from '@/components/contact';
 export const metadata: Metadata = {
   title: 'お問い合わせ',
   description:
-    'Brummbooo Driving Society へのお問い合わせ。おもちゃの提供、リレーボックスの設置、提供先としてのご相談など、お気軽にご連絡ください。',
+    'BrummBooo Driving Society へのお問い合わせ。おもちゃの提供、リレーボックスの設置、提供先としてのご相談など、お気軽にご連絡ください。',
 };
 
 export default function ContactPage() {

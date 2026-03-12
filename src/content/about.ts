@@ -19,7 +19,7 @@ export const aboutContent = {
       title: '私たちの考え',
       content: `私たちは、クルマ文化を未来へつないでいくためには、まずその入口となる原体験を子どもたちの身近なところに取り戻す必要があると考えました。
 
-Brummbooo Driving Society は、そのために生まれたプロジェクトです。`,
+BrummBooo Driving Society は、そのために生まれたプロジェクトです。`,
     },
     {
       id: 'our-activity',
@@ -36,7 +36,7 @@ Brummbooo Driving Society は、そのために生まれたプロジェクトで
     {
       id: 'project',
       title: 'クルマのおもちゃリレープロジェクト',
-      content: `Brummbooo Driving Society の中心となる活動が「クルマのおもちゃリレープロジェクト」です。
+      content: `BrummBooo Driving Society の中心となる活動が「クルマのおもちゃリレープロジェクト」です。
 
 家庭で遊び終わったクルマのおもちゃを集め、「クルマのおもちゃリレーボックス」を通じて回収し、必要とする幼稚園・保育園などへ届けていきます。`,
     },

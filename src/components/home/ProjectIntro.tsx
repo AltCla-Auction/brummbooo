@@ -7,7 +7,7 @@ export function ProjectIntro() {
       <Container>
         <SectionHeader
           title="私たちの活動"
-          subtitle="Brummbooo Driving Societyは、以下のプロジェクトを通じてクルマ文化を次世代へつなぎます。"
+          subtitle="BrummBooo Driving Societyは、以下のプロジェクトを通じてクルマ文化を次世代へつなぎます。"
         />
 
         <div className="max-w-4xl mx-auto">

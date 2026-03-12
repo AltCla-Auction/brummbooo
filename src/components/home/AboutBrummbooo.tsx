@@ -6,14 +6,14 @@ export function AboutBrummbooo() {
     <Section id="about-brummbooo" variant="accent" padding="lg">
       <Container>
         <SectionHeader
-          title="Brummbooo Driving Society とは"
+          title="BrummBooo Driving Society とは"
           subtitle="子どもたちにクルマ文化との原体験を届けるプロジェクトです。"
         />
 
         <div className="max-w-3xl mx-auto">
           <div className="prose prose-lg text-gray-700 leading-relaxed space-y-6">
             <p>
-              Brummbooo Driving Society（ブルンブー・ドライビング・ソサエティ）は、クルマ文化を次の世代へつないでいくことを目的としたプロジェクトです。
+              BrummBooo Driving Society（ブルンブー・ドライビング・ソサエティ）は、クルマ文化を次の世代へつないでいくことを目的としたプロジェクトです。
             </p>
             <p>
               子どもたちがクルマのおもちゃを手に取り、「ブーブー」と言いながら遊ぶ。その何気ない原体験が、将来のクルマ好きを育て、クルマ文化そのものを支える力になると私たちは考えています。
@@ -22,7 +22,7 @@ export function AboutBrummbooo() {
 
           <div className="mt-12 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-cyan-100">
             <h3 className="text-lg font-bold text-accent mb-4">
-              「Brummbooo」の由来
+              「BrummBooo」の由来
             </h3>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
@@ -42,7 +42,7 @@ export function AboutBrummbooo() {
                 </div>
               </div>
               <p>
-                ドイツ語の「Brumm」と、日本語の「ブー」を英語化した「Booo」を組み合わせ、<strong className="text-accent">Brummbooo（ブルンブー）</strong>という名前が生まれました。
+                ドイツ語の「Brumm」と、日本語の「ブー」を英語化した「Booo」を組み合わせ、<strong className="text-accent">BrummBooo（ブルンブー）</strong>という名前が生まれました。
               </p>
               <p>
                 世界の子どもたちが共有する「クルマの音」を名前に込め、この活動が国境を越えて広がっていくことを願っています。

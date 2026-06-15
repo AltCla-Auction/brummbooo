@@ -35,7 +35,7 @@ export default function SupportersPage() {
       <Section variant="default" padding="lg">
         <Container size="lg">
           <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12">
-            <p className="text-gray-700 leading-relaxed text-pretty">
+            <p className="text-gray-700 leading-relaxed text-pretty whitespace-pre-line">
               {supportersPageContent.intro}
             </p>
           </div>

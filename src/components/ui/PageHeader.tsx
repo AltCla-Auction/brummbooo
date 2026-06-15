@@ -17,18 +17,22 @@ export function PageHeader({ title, description, variant = 'accent', className }
   return (
     <div className={cn(variantStyles[variant], className)}>
       <Container>
-        <div className="py-12 sm:py-16 lg:py-20">
-          <h1 className={cn(
-            'text-3xl sm:text-4xl font-bold',
-            variant === 'accent' ? 'text-white' : 'text-gray-900'
-          )}>
+        <div className="py-12 sm:py-16 lg:py-20 text-center">
+          <h1
+            className={cn(
+              'text-3xl sm:text-4xl font-bold text-balance max-w-3xl mx-auto',
+              variant === 'accent' ? 'text-white' : 'text-gray-900'
+            )}
+          >
             {title}
           </h1>
           {description && (
-            <p className={cn(
-              'mt-4 text-lg max-w-2xl',
-              variant === 'accent' ? 'text-white/80' : 'text-gray-600'
-            )}>
+            <p
+              className={cn(
+                'mt-4 text-base sm:text-lg max-w-2xl mx-auto text-pretty leading-relaxed whitespace-pre-line',
+                variant === 'accent' ? 'text-white/80' : 'text-gray-600'
+              )}
+            >
               {description}
             </p>
           )}

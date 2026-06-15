@@ -2,7 +2,7 @@ export const missionContent = {
   title: '設立意旨',
   lead: '未来を担う子どもたちを守るために、正しい情報を届けたい。',
   subtitle:
-    'Brumm Booo Driving Society が、子どものセーフコクピット・プロジェクトを始めた理由です。',
+    'Brumm Booo Driving Society が、\n子どものセーフコクピット・プロジェクトを始めた理由です。',
   sections: [
     {
       id: 'purpose',

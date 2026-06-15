@@ -28,7 +28,7 @@ export default function ContactPage({ searchParams }: ContactPageProps) {
     <>
       <PageHeader
         title="お問い合わせ"
-        description="子どものセーフコクピット・プロジェクトに関するご質問・ご相談は、こちらからお送りください。"
+        description={'子どものセーフコクピット・プロジェクトに関するご質問・ご相談は、\nこちらからお送りください。'}
       />
 
       <Section variant="cream" padding="lg">

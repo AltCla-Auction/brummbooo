@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: '子どものセーフコクピット・プロジェクト｜Brumm Booo Driving Society',
+        alt: '親が子どものチャイルドシートのベルトを確認している様子｜子どものセーフコクピット・プロジェクト',
       },
     ],
   },

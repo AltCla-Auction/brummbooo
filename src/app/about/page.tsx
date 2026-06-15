@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Container, Section, PageHeader } from '@/components/ui';
 import { Button } from '@/components/ui/Button';
@@ -22,6 +23,21 @@ export default function AboutPage() {
         title={missionContent.lead}
         description={missionContent.subtitle}
       />
+
+      <Section variant="cream" padding="md">
+        <Container size="md">
+          <div className="relative aspect-[16/9] sm:aspect-[2/1] rounded-2xl overflow-hidden shadow-md ring-1 ring-black/5">
+            <Image
+              src="/images/hero-safe-cockpit.jpg"
+              alt="後席で、親が子どものチャイルドシートのベルトを確認している様子"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 768px) 100vw, 768px"
+              priority
+            />
+          </div>
+        </Container>
+      </Section>
 
       <Section variant="default" padding="lg">
         <Container size="md">

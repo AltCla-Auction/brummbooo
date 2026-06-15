@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
-import { SafeCockpitIcon } from './SafeCockpitIcon';
 
 export function HeroSection() {
   return (
@@ -71,31 +71,14 @@ export function HeroSection() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <div
-              className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-navy/90 to-navy-light shadow-xl"
-              role="img"
-              aria-label="親子で後席の安全な席を確認するイメージ（画像準備中）"
-            >
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                <div className="flex items-center gap-4 mb-6">
-                  <SafeCockpitIcon name="car" className="w-16 h-16 text-orange" />
-                  <SafeCockpitIcon name="steering" className="w-12 h-12 text-white/60" />
-                </div>
-                <p className="text-white/90 text-sm sm:text-base font-medium">
-                  親子で、安全な席を見直す
-                </p>
-                <p className="mt-2 text-white/50 text-xs sm:text-sm">
-                  画像差し替え予定
-                </p>
-                <div className="mt-6 flex gap-2">
-                  <span className="w-2 h-2 rounded-full bg-orange animate-pulse" />
-                  <span className="w-2 h-2 rounded-full bg-orange/60" />
-                  <span className="w-2 h-2 rounded-full bg-orange/30" />
-                </div>
-              </div>
-              <div
-                className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-orange/20 to-transparent"
-                aria-hidden="true"
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
+              <Image
+                src="/images/hero-safe-cockpit.jpg"
+                alt="後席で、親が子どものチャイルドシートのベルトを確認している様子"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
               />
             </div>
           </div>

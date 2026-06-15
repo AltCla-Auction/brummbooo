@@ -2,17 +2,21 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Container, Section, PageHeader } from '@/components/ui';
 import { Button } from '@/components/ui/Button';
-import { SupporterList } from '@/components/supporters';
+import {
+  CooperationRoleDefinitions,
+  SupporterCard,
+  SupporterList,
+} from '@/components/supporters';
 import { supporters, supportersPageContent, sortSupporters } from '@/content/supporters';
 
 export const metadata: Metadata = {
   title: 'サポーター・パートナー',
   description:
-    '子どものセーフコクピット・プロジェクトに賛同する運営会社・サポーター・パートナーをご紹介します。JDSインターナショナル、オルクラ、オールコンパス株式会社など。',
+    '子どものセーフコクピット・プロジェクトに賛同するパートナー（企業・団体）・サポーター（個人）をご紹介します。JDSインターナショナル、オルクラ、オールコンパス株式会社など。',
   openGraph: {
     title: 'サポーター・パートナー｜Brumm Booo Driving Society',
     description:
-      'この活動に賛同いただいている企業・団体と、その想いをご紹介します。',
+      'パートナー（企業・団体）とサポーター（個人）の区分と、活動に賛同いただいている方々の想いをご紹介します。',
   },
 };
 
@@ -30,26 +34,45 @@ export default function SupportersPage() {
 
       <Section variant="default" padding="lg">
         <Container size="lg">
-          <div className="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12">
             <p className="text-gray-700 leading-relaxed text-pretty">
-              各社・各団体が、なぜこの活動に賛同しているのか。
-              ロゴとあわせて、メッセージを掲載しています。
+              {supportersPageContent.intro}
             </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto mb-12 sm:mb-16">
+            <CooperationRoleDefinitions />
           </div>
 
           <div className="space-y-14 sm:space-y-16">
             <SupporterList
-              id="supporters-heading"
-              heading="サポーター"
-              items={supportersOnly}
+              id="partners-heading"
+              heading="パートナー"
+              items={partners}
             />
-            {partners.length > 0 && (
-              <SupporterList
-                id="partners-heading"
-                heading="パートナー"
-                items={partners}
-              />
-            )}
+
+            <section aria-labelledby="supporters-heading">
+              <h2
+                id="supporters-heading"
+                className="text-xl sm:text-2xl font-bold text-navy mb-6 sm:mb-8"
+              >
+                サポーター
+              </h2>
+              {supportersOnly.length > 0 ? (
+                <ul className="grid sm:grid-cols-2 gap-6 sm:gap-8 list-none p-0 m-0">
+                  {supportersOnly.map((supporter) => (
+                    <li key={supporter.id}>
+                      <SupporterCard supporter={supporter} />
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-gray-600 leading-relaxed text-pretty bg-cream/50 rounded-xl border border-gray-100 px-6 py-5">
+                  {supportersPageContent.supporterEmptyMessage}
+                </p>
+              )}
+            </section>
+
             <SupporterList
               id="operators-heading"
               heading="運営"

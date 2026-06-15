@@ -5,8 +5,8 @@ export interface Supporter {
   role: SupporterRole;
   roleLabel: string;
   name: string;
-  logoSrc: string;
-  logoAlt: string;
+  logoSrc?: string;
+  logoAlt?: string;
   logoOnDark?: boolean;
   websiteUrl?: string;
   message: string;
@@ -17,6 +17,21 @@ export const SUPPORTER_ROLE_LABELS: Record<SupporterRole, string> = {
   supporter: 'サポーター',
   partner: 'パートナー',
 };
+
+export const cooperationRoleDefinitions = [
+  {
+    role: 'partner' as const,
+    label: 'パートナー',
+    target: '企業・団体',
+    description: '活動趣旨に賛同し、法人・団体として協力する',
+  },
+  {
+    role: 'supporter' as const,
+    label: 'サポーター',
+    target: '個人',
+    description: '活動趣旨に賛同し、個人として応援・発信・協力する',
+  },
+] as const;
 
 /** アルファベット表記を50音表記より先に並べる */
 function getSortGroup(name: string): 0 | 1 {
@@ -49,8 +64,8 @@ export const supporters: Supporter[] = [
   },
   {
     id: 'jds-international',
-    role: 'supporter',
-    roleLabel: 'サポーター',
+    role: 'partner',
+    roleLabel: 'パートナー',
     name: 'JDSインターナショナル',
     logoSrc: '/images/jds-international-logo.png',
     logoAlt: 'JDSインターナショナル',
@@ -63,8 +78,8 @@ export const supporters: Supporter[] = [
   },
   {
     id: 'altcla',
-    role: 'supporter',
-    roleLabel: 'サポーター',
+    role: 'partner',
+    roleLabel: 'パートナー',
     name: 'オルクラ',
     logoSrc: '/images/altcla-logo.png',
     logoAlt: 'オルクラ',
@@ -79,10 +94,14 @@ export const supporters: Supporter[] = [
 
 export const supportersPageContent = {
   title: 'サポーター・パートナー',
-  lead: 'この活動に賛同いただいている企業・団体',
+  lead: 'この活動に賛同いただいているパートナー・サポーター',
   description:
-    '子どものセーフコクピット・プロジェクトは、ひとりでは広げられません。\n運営、サポーター、パートナーの皆さまとともに、正しい情報を社会へ届けていきます。',
+    '子どものセーフコクピット・プロジェクトは、ひとりでは広げられません。\n運営、パートナー、サポーターの皆さまとともに、正しい情報を社会へ届けていきます。',
+  intro:
+    'パートナー（企業・団体）とサポーター（個人）が、なぜこの活動に賛同しているのか。メッセージを掲載しています。',
+  supporterEmptyMessage:
+    '個人としてのサポーターは、順次掲載していきます。ご賛同いただける方は、お問い合わせよりご連絡ください。',
   ctaTitle: '活動への賛同・協力について',
   ctaDescription:
-    'サポーター・パートナーとしてのご参加、取材、イベント連携など、お気軽にご相談ください。',
+    'パートナー（企業・団体）・サポーター（個人）としてのご参加、取材、イベント連携など、お気軽にご相談ください。',
 } as const;

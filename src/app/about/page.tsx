@@ -20,7 +20,13 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        title={missionContent.lead}
+        title={
+          <>
+            <span className="block sm:inline">{missionContent.leadTitleLines[0]}</span>
+            <span className="block sm:inline sm:whitespace-nowrap">{missionContent.leadTitleLines[1]}</span>
+            <span className="block">{missionContent.leadTitleLines[2]}</span>
+          </>
+        }
         description={missionContent.subtitle}
       />
 

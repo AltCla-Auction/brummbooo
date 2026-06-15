@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import { Container } from './Container';
 
 interface PageHeaderProps {
-  title: string;
+  title: React.ReactNode;
   description?: string;
   variant?: 'default' | 'accent';
   className?: string;
@@ -20,7 +20,7 @@ export function PageHeader({ title, description, variant = 'accent', className }
         <div className="py-12 sm:py-16 lg:py-20 text-center">
           <h1
             className={cn(
-              'text-3xl sm:text-4xl font-bold text-balance max-w-3xl mx-auto',
+              'text-3xl sm:text-4xl font-bold text-pretty max-w-3xl mx-auto whitespace-pre-line',
               variant === 'accent' ? 'text-white' : 'text-gray-900'
             )}
           >

@@ -7,7 +7,7 @@ interface SupporterCardProps {
 }
 
 export function SupporterCard({ supporter }: SupporterCardProps) {
-  const logoArea = (
+  const logoArea = supporter.logoSrc ? (
     <div
       className={cn(
         'flex items-center justify-center h-24 sm:h-28 px-6 rounded-xl mb-6',
@@ -16,7 +16,7 @@ export function SupporterCard({ supporter }: SupporterCardProps) {
     >
       <Image
         src={supporter.logoSrc}
-        alt={supporter.logoAlt}
+        alt={supporter.logoAlt ?? supporter.name}
         width={280}
         height={80}
         className={cn(
@@ -25,7 +25,7 @@ export function SupporterCard({ supporter }: SupporterCardProps) {
         )}
       />
     </div>
-  );
+  ) : null;
 
   return (
     <article className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8 h-full flex flex-col">

@@ -39,11 +39,6 @@ export default function SupportersPage() {
 
           <div className="space-y-14 sm:space-y-16">
             <SupporterList
-              id="operators-heading"
-              heading="運営"
-              items={operators}
-            />
-            <SupporterList
               id="supporters-heading"
               heading="サポーター"
               items={supportersOnly}
@@ -55,6 +50,11 @@ export default function SupportersPage() {
                 items={partners}
               />
             )}
+            <SupporterList
+              id="operators-heading"
+              heading="運営"
+              items={operators}
+            />
           </div>
         </Container>
       </Section>

@@ -40,7 +40,6 @@ export const supporters: Supporter[] = [
     name: 'オルクラ',
     logoSrc: '/images/altcla-logo.png',
     logoAlt: 'オルクラ',
-    logoOnDark: true,
     websiteUrl: 'https://alter-classimo.com',
     message: `クルマを楽しみ、大切に乗り続ける文化を広げるサービスとして、子どものセーフコクピット・プロジェクトをサポートしています。
 

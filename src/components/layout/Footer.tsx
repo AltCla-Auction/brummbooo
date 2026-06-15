@@ -36,10 +36,10 @@ export function Footer() {
               <ul className="space-y-3">
                 <li>
                   <Link
-                    href="/#checkpoints"
+                    href="/about"
                     className="text-sm text-white/70 hover:text-white transition-colors"
                   >
-                    チェックポイント
+                    設立意旨
                   </Link>
                 </li>
                 <li>
@@ -48,6 +48,14 @@ export function Footer() {
                     className="text-sm text-white/70 hover:text-white transition-colors"
                   >
                     セーフコクピットとは
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#checkpoints"
+                    className="text-sm text-white/70 hover:text-white transition-colors"
+                  >
+                    チェックポイント
                   </Link>
                 </li>
                 <li>

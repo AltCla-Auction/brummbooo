@@ -1,5 +1,6 @@
 export { HeroSection } from './HeroSection';
-export { ProblemSection } from './ProblemSection';
+export { ApproachFlowSection } from './ApproachFlowSection';
+export { MissionSection } from './MissionSection';
 export { SafeCockpitSection } from './SafeCockpitSection';
 export { CheckPointsSection } from './CheckPointsSection';
 export { KimiNoCockpitSection } from './KimiNoCockpitSection';

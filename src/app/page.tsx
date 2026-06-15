@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import {
   HeroSection,
-  ProblemSection,
+  ApproachFlowSection,
+  MissionSection,
   SafeCockpitSection,
   CheckPointsSection,
   KimiNoCockpitSection,
@@ -25,7 +26,8 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <ProblemSection />
+      <ApproachFlowSection />
+      <MissionSection />
       <SafeCockpitSection />
       <CheckPointsSection />
       <KimiNoCockpitSection />

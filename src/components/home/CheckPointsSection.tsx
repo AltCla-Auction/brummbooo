@@ -19,8 +19,8 @@ export function CheckPointsSection() {
       <Container>
         <SectionHeader
           id="checkpoints-heading"
-          title="まずはここを見てみよう"
-          subtitle="専門的なことがわからなくても大丈夫です。まずは、次のポイントを見てみてください。気になるところがあれば、取扱説明書やメーカー、販売店、JAFなどの情報を確認しましょう。"
+          title="やさしいチェックポイント"
+          subtitle="セーフコクピットを親子で見直すための、具体的な入口です。専門的なことがわからなくても大丈夫。気になるところがあれば、取扱説明書やメーカー、販売店、JAFなどの情報を確認しましょう。"
           align="center"
         />
 

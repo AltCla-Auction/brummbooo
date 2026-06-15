@@ -43,11 +43,11 @@ export function HeroSection() {
             <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
               <Button
                 as="link"
-                href="#checkpoints"
+                href="/about"
                 size="lg"
-                ariaLabel="まずはチェックポイントを見る"
+                ariaLabel="設立意旨を読む"
               >
-                まずはチェックポイントを見る
+                設立意旨を読む
               </Button>
               <Button
                 as="link"
@@ -60,12 +60,12 @@ export function HeroSection() {
               </Button>
               <Button
                 as="link"
-                href="#kimi-no-cockpit"
+                href="#checkpoints"
                 variant="secondary"
                 size="lg"
-                ariaLabel="きみのコクピットプロジェクトを見る"
+                ariaLabel="チェックポイントを見る"
               >
-                きみのコクピットプロジェクトを見る
+                チェックポイントを見る
               </Button>
             </div>
           </div>

@@ -11,8 +11,9 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { href: '/#checkpoints', label: 'チェックポイント', isAnchor: true },
+  { href: '/about', label: '設立意旨' },
   { href: '/#safe-cockpit', label: 'セーフコクピット', isAnchor: true },
+  { href: '/#checkpoints', label: 'チェックポイント', isAnchor: true },
   { href: '/#kimi-no-cockpit', label: 'きみのコクピット', isAnchor: true },
   { href: '/#parent-info', label: '保護者向け情報', isAnchor: true },
   { href: '/contact', label: 'お問い合わせ' },
@@ -27,6 +28,9 @@ export function Navigation({ isMobile, onItemClick }: NavigationProps) {
   const pathname = usePathname();
 
   const isActive = (item: NavItem) => {
+    if (item.href === '/about') {
+      return pathname === '/about';
+    }
     if (item.isAnchor) {
       return pathname === '/';
     }
@@ -55,7 +59,7 @@ export function Navigation({ isMobile, onItemClick }: NavigationProps) {
             onClick={onItemClick}
             className={cn(
               'px-4 py-3 rounded-lg text-sm font-medium transition-colors',
-              isActive(item) && !item.isAnchor
+              isActive(item)
                 ? 'bg-orange/10 text-orange-dark'
                 : 'text-gray-700 hover:bg-surface hover:text-orange-dark'
             )}
@@ -75,7 +79,7 @@ export function Navigation({ isMobile, onItemClick }: NavigationProps) {
           href={item.href}
           className={cn(
             'px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap',
-            isActive(item) && !item.isAnchor
+            isActive(item)
               ? 'text-orange-dark'
               : 'text-gray-600 hover:text-orange-dark hover:bg-cream'
           )}

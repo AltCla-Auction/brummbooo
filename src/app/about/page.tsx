@@ -1,68 +1,72 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
-import { Container } from '@/components/ui';
-import { aboutContent } from '@/content/about';
+import Link from 'next/link';
+import { Container, Section, PageHeader } from '@/components/ui';
+import { Button } from '@/components/ui/Button';
+import { missionContent } from '@/content/mission';
 
 export const metadata: Metadata = {
-  title: '設立趣旨',
+  title: '設立意旨',
   description:
-    'BrummBooo Driving Society の設立趣旨。クルマ文化の原体験を、次の世代へつなぐために生まれたプロジェクトです。',
+    'Brumm Booo Driving Society の設立意旨。チャイルドシートの普及が進む中、ジュニアシートや正しい座り方への正しい情報を、未来を担うお子様のために届ける活動です。',
+  openGraph: {
+    title: '設立意旨｜Brumm Booo Driving Society',
+    description:
+      '未来を担う大切なお子様へ、正しい情報を届ける。子どものセーフコクピット・プロジェクトの設立意旨です。',
+  },
 };
 
 export default function AboutPage() {
   return (
     <>
-      <div className="relative h-96 sm:h-[28rem] lg:h-[32rem]">
-        <Image
-          src="/images/about-hero.jpg"
-          alt=""
-          fill
-          className="object-cover object-center"
-          style={{ objectPosition: '50% 40%' }}
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent" />
-      </div>
+      <PageHeader
+        title={missionContent.lead}
+        description={missionContent.subtitle}
+      />
 
-      <article className="py-12 sm:py-16 lg:py-20 -mt-32 relative z-10">
+      <Section variant="default" padding="lg">
         <Container size="md">
-          <div className="bg-white rounded-2xl shadow-sm p-8 sm:p-12">
-            <header className="mb-12 sm:mb-16">
-              <p className="text-accent font-medium mb-4">{aboutContent.title}</p>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                クルマ文化の原体験を、
-                <br />
-                <span className="text-accent">次の世代へ。</span>
-              </h1>
-            </header>
+          <article className="prose-article max-w-none">
+            {missionContent.sections.map((section, index) => (
+              <section
+                key={section.id}
+                id={section.id}
+                className={index > 0 ? 'mt-12 sm:mt-16 pt-12 sm:pt-16 border-t border-gray-100' : ''}
+              >
+                <h2 className="text-xl sm:text-2xl font-bold text-navy mb-6 text-balance">
+                  {section.title}
+                </h2>
+                <div className="text-gray-700 text-base sm:text-lg leading-relaxed whitespace-pre-line text-pretty">
+                  {section.content}
+                </div>
+              </section>
+            ))}
+          </article>
 
-            <div className="space-y-12 sm:space-y-16">
-              {aboutContent.sections.map((section, index) => (
-                <section
-                  key={section.id}
-                  className="scroll-mt-24"
-                  id={section.id}
-                >
-                  {index > 0 && (
-                    <h2 className="text-xl sm:text-2xl font-bold text-accent mb-6">
-                      {section.title}
-                    </h2>
-                  )}
-                  <div className="text-gray-700 text-base sm:text-lg leading-loose whitespace-pre-line">
-                    {section.content}
-                  </div>
-                </section>
-              ))}
+          <div className="mt-16 sm:mt-20 pt-10 border-t border-gray-200">
+            <p className="text-center text-gray-600 mb-6 text-pretty">
+              セーフコクピットの考え方と、具体的なチェックポイントもあわせてご覧ください。
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-3">
+              <Button as="link" href="/#safe-cockpit" variant="primary" size="lg">
+                セーフコクピットを知る
+              </Button>
+              <Button as="link" href="/#checkpoints" variant="outline" size="lg">
+                チェックポイントを見る
+              </Button>
             </div>
-
-            <footer className="mt-16 sm:mt-20 pt-8 border-t border-gray-200">
-              <p className="text-sm text-gray-500 text-center">
-                BrummBooo Driving Society
-              </p>
-            </footer>
           </div>
+
+          <footer className="mt-16 pt-8 border-t border-gray-200">
+            <p className="text-sm text-gray-500 text-center">
+              <Link href="/" className="text-orange-dark hover:underline">
+                トップページへ戻る
+              </Link>
+              {' · '}
+              Brumm Booo Driving Society
+            </p>
+          </footer>
         </Container>
-      </article>
+      </Section>
     </>
   );
 }

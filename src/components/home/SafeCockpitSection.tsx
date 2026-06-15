@@ -15,13 +15,13 @@ export function SafeCockpitSection() {
         <SectionHeader
           id="safe-cockpit-heading"
           title="セーフコクピットとは？"
+          subtitle="正しい情報を家庭に届けるための考え方です。チャイルドシートやジュニアシート、後席シートベルト、座り方——子どもに合った「安全な席」を、ひとつの概念として捉えます。"
           align="center"
         />
 
         <p className="max-w-2xl mx-auto text-center text-gray-700 leading-relaxed text-pretty mb-10 sm:mb-12">
-          セーフコクピットとは、子どもの体に合った、安全な座席環境のことです。
-          チャイルドシート、ジュニアシート、後席シートベルト、座る位置、ベルトの通り方。
-          それらをまとめて、子どもにとっての「安全なコクピット」として考えます。
+          設立意旨でお伝えした課題を、家庭で見直しやすい形にしたのがセーフコクピットです。
+          年齢だけで判断するのではなく、身長・体格・ベルトの位置・座り方まで含めて、子どもにとっての「安全なコクピット」として考えます。
         </p>
 
         <ul className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 list-none p-0 m-0">

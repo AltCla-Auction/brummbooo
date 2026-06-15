@@ -1,6 +1,15 @@
 import { cn } from '@/lib/utils';
 
-type SectionVariant = 'default' | 'gray' | 'muted' | 'accent' | 'accent-dark';
+type SectionVariant =
+  | 'default'
+  | 'gray'
+  | 'cream'
+  | 'surface'
+  | 'navy'
+  | 'orange'
+  | 'muted'
+  | 'accent'
+  | 'accent-dark';
 type SectionPadding = 'sm' | 'md' | 'lg' | 'xl';
 
 interface SectionProps {
@@ -9,14 +18,19 @@ interface SectionProps {
   className?: string;
   id?: string;
   children: React.ReactNode;
+  ariaLabelledby?: string;
 }
 
 const variantStyles: Record<SectionVariant, string> = {
   default: 'bg-white',
-  gray: 'bg-gray-50',
-  muted: 'bg-cyan-50/50',
-  accent: 'bg-gradient-to-br from-cyan-50 to-cyan-100/80',
-  'accent-dark': 'bg-gradient-to-r from-cyan-700 via-cyan-600 to-cyan-400 text-white',
+  gray: 'bg-surface',
+  cream: 'bg-cream',
+  surface: 'bg-surface',
+  navy: 'bg-navy text-white',
+  orange: 'bg-gradient-to-br from-cream to-primary-100',
+  muted: 'bg-cream/60',
+  accent: 'bg-gradient-to-br from-cream to-primary-100',
+  'accent-dark': 'bg-navy text-white',
 };
 
 const paddingStyles: Record<SectionPadding, string> = {
@@ -32,10 +46,12 @@ export function Section({
   className,
   id,
   children,
+  ariaLabelledby,
 }: SectionProps) {
   return (
     <section
       id={id}
+      aria-labelledby={ariaLabelledby}
       className={cn(variantStyles[variant], paddingStyles[padding], className)}
     >
       {children}
@@ -48,6 +64,8 @@ interface SectionHeaderProps {
   subtitle?: string;
   align?: 'left' | 'center';
   className?: string;
+  id?: string;
+  light?: boolean;
 }
 
 export function SectionHeader({
@@ -55,6 +73,8 @@ export function SectionHeader({
   subtitle,
   align = 'center',
   className,
+  id,
+  light = false,
 }: SectionHeaderProps) {
   return (
     <div
@@ -64,9 +84,23 @@ export function SectionHeader({
         className
       )}
     >
-      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">{title}</h2>
+      <h2
+        id={id}
+        className={cn(
+          'text-2xl sm:text-3xl font-bold text-balance',
+          light ? 'text-white' : 'text-navy'
+        )}
+      >
+        {title}
+      </h2>
       {subtitle && (
-        <p className="mt-3 text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
+        <p
+          className={cn(
+            'mt-3 text-base sm:text-lg max-w-2xl mx-auto text-pretty leading-relaxed',
+            light ? 'text-white/80' : 'text-gray-600',
+            align === 'left' && 'mx-0'
+          )}
+        >
           {subtitle}
         </p>
       )}

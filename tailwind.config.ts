@@ -9,20 +9,30 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#ecfeff',
-          100: '#cffafe',
-          200: '#a5f3fc',
-          300: '#67e8f9',
-          400: '#22d3ee',
-          500: '#06b6d4',
-          600: '#0891b2',
-          700: '#0e7490',
-          800: '#155e75',
-          900: '#164e63',
-          950: '#083344',
+        navy: {
+          DEFAULT: '#1E2A38',
+          light: '#2D3E52',
         },
-        accent: '#0e7490',
+        orange: {
+          DEFAULT: '#F59E0B',
+          dark: '#D97706',
+          light: '#FBBF24',
+        },
+        cream: '#FFF7E6',
+        surface: '#F5F5F5',
+        primary: {
+          50: '#FFF7E6',
+          100: '#FEF3C7',
+          200: '#FDE68A',
+          300: '#FCD34D',
+          400: '#FBBF24',
+          500: '#F59E0B',
+          600: '#D97706',
+          700: '#B45309',
+          800: '#92400E',
+          900: '#78350F',
+        },
+        accent: '#F59E0B',
       },
       fontFamily: {
         sans: [
@@ -39,25 +49,25 @@ const config: Config = {
             color: '#374151',
             lineHeight: '1.8',
             h1: {
-              color: '#0e7490',
+              color: '#1E2A38',
               fontWeight: '700',
             },
             h2: {
-              color: '#0e7490',
+              color: '#1E2A38',
               fontWeight: '600',
             },
             h3: {
-              color: '#0e7490',
+              color: '#1E2A38',
               fontWeight: '600',
             },
             a: {
-              color: '#0e7490',
+              color: '#D97706',
               '&:hover': {
-                color: '#155e75',
+                color: '#B45309',
               },
             },
             strong: {
-              color: '#0e7490',
+              color: '#1E2A38',
             },
           },
         },

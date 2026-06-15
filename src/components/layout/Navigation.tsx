@@ -7,16 +7,14 @@ import { cn } from '@/lib/utils';
 interface NavItem {
   href: string;
   label: string;
+  isAnchor?: boolean;
 }
 
 const navItems: NavItem[] = [
-  { href: '/', label: 'TOP' },
-  { href: '/about', label: '設立趣旨' },
-  { href: '/project', label: 'プロジェクト' },
-  { href: '/relay-box', label: '設置協力' },
-  { href: '/recipients', label: '提供先募集' },
-  { href: '/reports', label: '活動報告' },
-  { href: '/organization', label: '団体概要' },
+  { href: '/#checkpoints', label: 'チェックポイント', isAnchor: true },
+  { href: '/#safe-cockpit', label: 'セーフコクピット', isAnchor: true },
+  { href: '/#kimi-no-cockpit', label: 'きみのコクピット', isAnchor: true },
+  { href: '/#parent-info', label: '保護者向け情報', isAnchor: true },
   { href: '/contact', label: 'お問い合わせ' },
 ];
 
@@ -28,50 +26,63 @@ interface NavigationProps {
 export function Navigation({ isMobile, onItemClick }: NavigationProps) {
   const pathname = usePathname();
 
+  const isActive = (item: NavItem) => {
+    if (item.isAnchor) {
+      return pathname === '/';
+    }
+    return pathname === item.href || pathname.startsWith(item.href + '/');
+  };
+
   if (isMobile) {
     return (
-      <nav className="flex flex-col gap-1">
-        {navItems.map((item) => {
-          const isActive = item.href === '/' ? pathname === '/' : (pathname === item.href || pathname.startsWith(item.href + '/'));
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={onItemClick}
-              className={cn(
-                'px-4 py-3 rounded-lg text-sm font-medium transition-colors',
-                isActive
-                  ? 'bg-accent/10 text-accent'
-                  : 'text-gray-700 hover:bg-gray-50 hover:text-accent'
-              )}
-            >
-              {item.label}
-            </Link>
-          );
-        })}
+      <nav className="flex flex-col gap-1" aria-label="モバイルナビゲーション">
+        <Link
+          href="/"
+          onClick={onItemClick}
+          className={cn(
+            'px-4 py-3 rounded-lg text-sm font-medium transition-colors',
+            pathname === '/'
+              ? 'bg-orange/10 text-orange-dark'
+              : 'text-gray-700 hover:bg-surface hover:text-orange-dark'
+          )}
+        >
+          トップ
+        </Link>
+        {navItems.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            onClick={onItemClick}
+            className={cn(
+              'px-4 py-3 rounded-lg text-sm font-medium transition-colors',
+              isActive(item) && !item.isAnchor
+                ? 'bg-orange/10 text-orange-dark'
+                : 'text-gray-700 hover:bg-surface hover:text-orange-dark'
+            )}
+          >
+            {item.label}
+          </Link>
+        ))}
       </nav>
     );
   }
 
   return (
-    <nav className="flex items-center gap-1">
-      {navItems.map((item) => {
-        const isActive = item.href === '/' ? pathname === '/' : (pathname === item.href || pathname.startsWith(item.href + '/'));
-        return (
-          <Link
-            key={item.href}
-            href={item.href}
-            className={cn(
-              'px-3 py-2 rounded-md text-sm font-medium transition-colors',
-              isActive
-                ? 'text-accent'
-                : 'text-gray-600 hover:text-accent hover:bg-gray-50'
-            )}
-          >
-            {item.label}
-          </Link>
-        );
-      })}
+    <nav className="flex items-center gap-1" aria-label="デスクトップナビゲーション">
+      {navItems.map((item) => (
+        <Link
+          key={item.href}
+          href={item.href}
+          className={cn(
+            'px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap',
+            isActive(item) && !item.isAnchor
+              ? 'text-orange-dark'
+              : 'text-gray-600 hover:text-orange-dark hover:bg-cream'
+          )}
+        >
+          {item.label}
+        </Link>
+      ))}
     </nav>
   );
 }

@@ -1,108 +1,107 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const footerLinks = {
-  about: [
-    { href: '/about', label: '設立趣旨' },
-    { href: '/project', label: 'プロジェクト' },
-    { href: '/organization', label: '団体概要' },
-  ],
-  participate: [
-    { href: '/relay-box', label: 'リレーボックス設置' },
-    { href: '/recipients', label: '提供先募集' },
-    { href: '/contact', label: 'お問い合わせ' },
-  ],
-  info: [
-    { href: '/reports', label: '活動報告' },
-    { href: '/privacy', label: 'プライバシーポリシー' },
-  ],
-};
-
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-cyan-800 via-cyan-700 to-cyan-500 text-white">
+    <footer className="bg-navy text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          <div className="sm:col-span-2 lg:col-span-1">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+          <div>
             <Link
               href="/"
               className="inline-block hover:opacity-80 transition-opacity"
+              aria-label="Brumm Booo Driving Society トップページへ"
             >
               <Image
                 src="/images/logo-white.png"
-                alt="BrummBooo Driving Society"
+                alt="Brumm Booo Driving Society"
                 width={150}
                 height={98}
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="mt-4 text-sm text-cyan-200 leading-relaxed">
-              クルマ文化の原体験を、次の世代へ。
+            <p className="mt-4 text-sm font-medium text-orange-light">
+              子どものセーフコクピット・プロジェクト
+            </p>
+            <p className="mt-3 text-sm text-white/70 leading-relaxed text-pretty max-w-md">
+              「あの時、ちゃんと合う席にしておけばよかった。」そんな後悔を、なくしたい。
             </p>
           </div>
 
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-4">
-              この活動について
-            </h3>
-            <ul className="space-y-3">
-              {footerLinks.about.map((link) => (
-                <li key={link.href}>
+          <div className="flex flex-col sm:flex-row gap-8 sm:gap-12">
+            <div>
+              <h3 className="text-sm font-semibold text-white mb-4">
+                サイトメニュー
+              </h3>
+              <ul className="space-y-3">
+                <li>
                   <Link
-                    href={link.href}
-                    className="text-sm text-cyan-200 hover:text-white transition-colors"
+                    href="/#checkpoints"
+                    className="text-sm text-white/70 hover:text-white transition-colors"
                   >
-                    {link.label}
+                    チェックポイント
                   </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
+                <li>
+                  <Link
+                    href="/#safe-cockpit"
+                    className="text-sm text-white/70 hover:text-white transition-colors"
+                  >
+                    セーフコクピットとは
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#kimi-no-cockpit"
+                    className="text-sm text-white/70 hover:text-white transition-colors"
+                  >
+                    きみのコクピット
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#participate"
+                    className="text-sm text-white/70 hover:text-white transition-colors"
+                  >
+                    活動に参加する
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-4">
-              参加する
-            </h3>
-            <ul className="space-y-3">
-              {footerLinks.participate.map((link) => (
-                <li key={link.href}>
+            <div>
+              <h3 className="text-sm font-semibold text-white mb-4">
+                お問い合わせ
+              </h3>
+              <ul className="space-y-3">
+                <li>
                   <Link
-                    href={link.href}
-                    className="text-sm text-cyan-200 hover:text-white transition-colors"
+                    href="/contact"
+                    className="text-sm text-white/70 hover:text-white transition-colors"
                   >
-                    {link.label}
+                    お問い合わせ
                   </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-4">
-              情報
-            </h3>
-            <ul className="space-y-3">
-              {footerLinks.info.map((link) => (
-                <li key={link.href}>
+                <li>
                   <Link
-                    href={link.href}
-                    className="text-sm text-cyan-200 hover:text-white transition-colors"
+                    href="/privacy"
+                    className="text-sm text-white/70 hover:text-white transition-colors"
                   >
-                    {link.label}
+                    プライバシーポリシー
                   </Link>
                 </li>
-              ))}
-            </ul>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-cyan-700">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-cyan-300">
-              事務局：オールコンパス株式会社
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <p className="text-xs text-white/50">
+              運営会社：オールコンパス株式会社
             </p>
-            <p className="text-xs text-cyan-300">
-              © {new Date().getFullYear()} BrummBooo Driving Society
+            <p className="text-xs text-white/50">
+              © {new Date().getFullYear()} Brumm Booo Driving Society
             </p>
           </div>
         </div>

@@ -10,8 +10,8 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description, variant = 'accent', className }: PageHeaderProps) {
   const variantStyles = {
-    default: 'bg-gray-50 border-b border-gray-100',
-    accent: 'bg-gradient-to-r from-cyan-700 via-cyan-600 to-cyan-400 text-white',
+    default: 'bg-surface border-b border-gray-100',
+    accent: 'bg-navy text-white',
   };
 
   return (
@@ -27,7 +27,7 @@ export function PageHeader({ title, description, variant = 'accent', className }
           {description && (
             <p className={cn(
               'mt-4 text-lg max-w-2xl',
-              variant === 'accent' ? 'text-cyan-100' : 'text-gray-600'
+              variant === 'accent' ? 'text-white/80' : 'text-gray-600'
             )}>
               {description}
             </p>

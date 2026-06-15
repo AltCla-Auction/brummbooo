@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
-type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
+type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'navy';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
 interface ButtonBaseProps {
@@ -9,6 +9,7 @@ interface ButtonBaseProps {
   size?: ButtonSize;
   className?: string;
   children: React.ReactNode;
+  ariaLabel?: string;
 }
 
 interface ButtonAsButtonProps extends ButtonBaseProps {
@@ -27,13 +28,15 @@ type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps;
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-accent text-white hover:bg-cyan-800 focus:ring-accent/20',
+    'bg-orange text-white hover:bg-orange-dark focus:ring-orange/30',
   secondary:
-    'bg-cyan-50 text-cyan-900 hover:bg-cyan-100 focus:ring-cyan-300',
+    'bg-cream text-navy hover:bg-primary-100 focus:ring-orange/20',
   outline:
-    'border-2 border-accent text-accent hover:bg-cyan-50 focus:ring-accent/20',
+    'border-2 border-orange text-orange hover:bg-cream focus:ring-orange/20',
   ghost:
-    'text-gray-700 hover:bg-cyan-50 hover:text-accent focus:ring-cyan-200',
+    'text-navy hover:bg-surface hover:text-orange-dark focus:ring-orange/20',
+  navy:
+    'bg-navy text-white hover:bg-navy-light focus:ring-navy/30',
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -48,6 +51,7 @@ export function Button(props: ButtonProps) {
     size = 'md',
     className,
     children,
+    ariaLabel,
   } = props;
 
   const baseStyles = cn(
@@ -62,7 +66,7 @@ export function Button(props: ButtonProps) {
 
   if (props.as === 'link') {
     return (
-      <Link href={props.href} className={baseStyles}>
+      <Link href={props.href} className={baseStyles} aria-label={ariaLabel}>
         {children}
       </Link>
     );
@@ -74,6 +78,7 @@ export function Button(props: ButtonProps) {
       disabled={props.disabled}
       onClick={props.onClick}
       className={baseStyles}
+      aria-label={ariaLabel}
     >
       {children}
     </button>

@@ -6,10 +6,11 @@
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply text-gray-900 bg-white;
+    @apply text-navy bg-white;
   }
 
   h1,
@@ -28,7 +29,7 @@
   }
 
   .prose-article h2 {
-    @apply text-2xl font-bold text-accent mt-12 mb-6;
+    @apply text-2xl font-bold text-navy mt-12 mb-6;
   }
 
   .prose-article h3 {
@@ -53,11 +54,11 @@
   }
 
   .prose-article a {
-    @apply text-accent underline hover:no-underline;
+    @apply text-orange-dark underline hover:no-underline;
   }
 
   .prose-article blockquote {
-    @apply border-l-4 border-accent/30 pl-6 py-2 my-6 text-gray-600 italic;
+    @apply border-l-4 border-orange/30 pl-6 py-2 my-6 text-gray-600 italic;
   }
 
   .rich-text img {
@@ -86,7 +87,7 @@
   }
 
   .rich-text a {
-    @apply text-accent underline hover:no-underline;
+    @apply text-orange-dark underline hover:no-underline;
   }
 }
 

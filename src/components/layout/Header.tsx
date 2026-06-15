@@ -15,10 +15,11 @@ export function Header() {
           <Link
             href="/"
             className="hover:opacity-80 transition-opacity"
+            aria-label="Brumm Booo Driving Society トップページへ"
           >
             <Image
               src="/images/logo.png"
-              alt="BrummBooo Driving Society"
+              alt="Brumm Booo Driving Society"
               width={180}
               height={117}
               className="h-10 sm:h-12 w-auto"
@@ -26,15 +27,15 @@ export function Header() {
             />
           </Link>
 
-          <nav className="hidden lg:block">
+          <nav className="hidden lg:block" aria-label="メインナビゲーション">
             <Navigation />
           </nav>
 
           <button
             type="button"
-            className="lg:hidden p-2 -mr-2 text-gray-600 hover:text-accent"
+            className="lg:hidden p-2 -mr-2 text-navy hover:text-orange"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="メニューを開く"
+            aria-label={isMenuOpen ? 'メニューを閉じる' : 'メニューを開く'}
             aria-expanded={isMenuOpen}
           >
             <svg

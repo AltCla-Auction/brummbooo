@@ -5,43 +5,42 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://brummbooo.autos'),
   title: {
-    default: 'BrummBooo Driving Society | クルマ文化の原体験を、次の世代へ',
-    template: '%s | BrummBooo Driving Society',
+    default: '子どものセーフコクピット・プロジェクト｜Brumm Booo Driving Society',
+    template: '%s | Brumm Booo Driving Society',
   },
   description:
-    '家庭で遊び終わったクルマのおもちゃを集め、幼稚園や保育園へ届けるプロジェクトです。クルマ文化の原体験を、次の世代へつなぎます。',
+    '子どもの体に合った安全な席づくりを広げる、Brumm Booo Driving Society の社会活動。チャイルドシート、ジュニアシート、後席シートベルトを親子で見直すきっかけを届けます。',
   keywords: [
-    'クルマのおもちゃ',
-    'ミニカー',
-    '寄付',
-    'プロジェクト',
-    '幼稚園',
-    '保育園',
-    'クルマ文化',
+    'チャイルドシート',
+    'ジュニアシート',
+    '後席シートベルト',
+    '子どもの安全',
+    'セーフコクピット',
+    'Brumm Booo Driving Society',
   ],
-  authors: [{ name: 'BrummBooo Driving Society' }],
+  authors: [{ name: 'Brumm Booo Driving Society' }],
   openGraph: {
     type: 'website',
     locale: 'ja_JP',
     url: 'https://brummbooo.autos',
-    siteName: 'BrummBooo Driving Society',
-    title: 'BrummBooo Driving Society | クルマ文化の原体験を、次の世代へ',
+    siteName: 'Brumm Booo Driving Society',
+    title: '子どものセーフコクピット・プロジェクト｜Brumm Booo Driving Society',
     description:
-      '家庭で遊び終わったクルマのおもちゃを集め、幼稚園や保育園へ届けるプロジェクトです。',
+      '子どもの体に合った安全な席づくりを広げる、Brumm Booo Driving Society の社会活動。チャイルドシート、ジュニアシート、後席シートベルトを親子で見直すきっかけを届けます。',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'BrummBooo Driving Society',
+        alt: '子どものセーフコクピット・プロジェクト｜Brumm Booo Driving Society',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BrummBooo Driving Society',
+    title: '子どものセーフコクピット・プロジェクト｜Brumm Booo Driving Society',
     description:
-      '家庭で遊び終わったクルマのおもちゃを集め、幼稚園や保育園へ届けるプロジェクトです。',
+      '子どもの体に合った安全な席づくりを広げる、Brumm Booo Driving Society の社会活動。',
     images: ['/images/og-image.jpg'],
   },
   robots: {

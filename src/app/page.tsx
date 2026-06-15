@@ -1,32 +1,37 @@
-'use client';
-
-import { useState, useEffect } from 'react';
+import type { Metadata } from 'next';
 import {
-  Hero,
-  AboutBrummbooo,
-  ProjectIntro,
-  TargetNavigation,
-  RecentReports,
-  AboutPreview,
+  HeroSection,
+  ProblemSection,
+  SafeCockpitSection,
+  CheckPointsSection,
+  KimiNoCockpitSection,
+  ParentInfoSection,
+  RoleSection,
+  ParticipateSection,
 } from '@/components/home';
-import { getPublishedReports } from '@/lib/reports-service';
-import type { ReportListItem } from '@/types';
+
+export const metadata: Metadata = {
+  title: '子どものセーフコクピット・プロジェクト',
+  description:
+    '子どもの体に合った安全な席づくりを広げる、Brumm Booo Driving Society の社会活動。チャイルドシート、ジュニアシート、後席シートベルトを親子で見直すきっかけを届けます。',
+  openGraph: {
+    title: '子どものセーフコクピット・プロジェクト｜Brumm Booo Driving Society',
+    description:
+      '子どもの体に合った安全な席づくりを広げる、Brumm Booo Driving Society の社会活動。チャイルドシート、ジュニアシート、後席シートベルトを親子で見直すきっかけを届けます。',
+  },
+};
 
 export default function HomePage() {
-  const [reports, setReports] = useState<ReportListItem[]>([]);
-
-  useEffect(() => {
-    getPublishedReports(3).then(setReports).catch(console.error);
-  }, []);
-
   return (
     <>
-      <Hero />
-      <AboutBrummbooo />
-      <ProjectIntro />
-      <TargetNavigation />
-      {reports.length > 0 && <RecentReports reports={reports} />}
-      <AboutPreview />
+      <HeroSection />
+      <ProblemSection />
+      <SafeCockpitSection />
+      <CheckPointsSection />
+      <KimiNoCockpitSection />
+      <ParentInfoSection />
+      <RoleSection />
+      <ParticipateSection />
     </>
   );
 }

@@ -16,6 +16,7 @@ const navItems: NavItem[] = [
   { href: '/#checkpoints', label: 'チェックポイント', isAnchor: true },
   { href: '/#kimi-no-cockpit', label: 'きみのコクピット', isAnchor: true },
   { href: '/#parent-info', label: '保護者向け情報', isAnchor: true },
+  { href: '/supporters', label: 'サポーター' },
   { href: '/contact', label: 'お問い合わせ' },
 ];
 

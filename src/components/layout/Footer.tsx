@@ -68,6 +68,14 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
+                    href="/supporters"
+                    className="text-sm text-white/70 hover:text-white transition-colors"
+                  >
+                    サポーター・パートナー
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/#participate"
                     className="text-sm text-white/70 hover:text-white transition-colors"
                   >

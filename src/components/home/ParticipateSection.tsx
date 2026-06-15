@@ -55,6 +55,10 @@ export function ParticipateSection() {
         </div>
 
         <p className="mt-8 text-center text-sm text-white/60">
+          <a href="/supporters" className="text-orange-light underline hover:no-underline">
+            サポーター・パートナーを見る
+          </a>
+          {' · '}
           または{' '}
           <a
             href={`mailto:${CONTACT_EMAIL}`}

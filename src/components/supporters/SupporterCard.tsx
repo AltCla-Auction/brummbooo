@@ -11,7 +11,7 @@ export function SupporterCard({ supporter }: SupporterCardProps) {
     <div
       className={cn(
         'flex items-center justify-center h-24 sm:h-28 px-6 rounded-xl mb-6',
-        supporter.logoOnDark ? 'bg-navy' : 'bg-surface border border-gray-100'
+        supporter.logoOnDark ? 'bg-navy' : 'bg-white'
       )}
     >
       <Image

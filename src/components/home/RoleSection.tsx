@@ -14,7 +14,7 @@ export function RoleSection() {
         <SectionHeader
           id="role-heading"
           title="Brumm Booo Driving Society の役割"
-          subtitle="Brumm Booo Driving Society は、親子で安全な席を見直すきっかけをつくる活動です。専門的な診断や安全の保証ではなく、わかりやすい情報発信と、家庭で続けやすい習慣づくりを大切にします。"
+          subtitle="Brumm Booo Driving Society は、社会貢献活動を行う任意団体です。親子で安全な席を見直すきっかけをつくることを大切にし、専門的な診断や安全の保証は行いません。わかりやすい情報発信と、家庭で続けやすい習慣づくりに取り組んでいます。"
           align="center"
         />
 

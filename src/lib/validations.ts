@@ -1,9 +1,12 @@
 import { z } from 'zod';
 
 export const contactFormSchema = z.object({
-  inquiryType: z.enum(['provide', 'install', 'receive', 'media', 'other'], {
-    required_error: 'お問い合わせ種別を選択してください',
-  }),
+  inquiryType: z.enum(
+    ['cooperate', 'event', 'sticker', 'media', 'other', 'provide', 'install', 'receive'],
+    {
+      required_error: 'お問い合わせ種別を選択してください',
+    }
+  ),
   name: z
     .string()
     .min(1, 'お名前を入力してください')

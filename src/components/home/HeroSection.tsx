@@ -33,7 +33,7 @@ export function HeroSection() {
             <p className="mt-6 text-base sm:text-lg text-gray-700 leading-relaxed text-pretty">
               チャイルドシート、ジュニアシート、後席シートベルト。
               子どもの席は、年齢だけでなく、身長や体格に合っていることが大切です。
-              Brumm Booo Driving Society は、子どもの体に合った&ldquo;安全な席&rdquo;を親子で見直す活動です。
+              Brumm Booo Driving Society は、社会貢献活動を行う任意団体として、子どもの体に合った&ldquo;安全な席&rdquo;を親子で見直す取り組みを進めています。
             </p>
 
             <p className="mt-6 text-lg sm:text-xl font-semibold text-navy">

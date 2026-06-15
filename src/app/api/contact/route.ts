@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     }
 
     const emailContent = `
-BrummBooo Driving Society へのお問い合わせ
+Brumm Booo Driving Society へのお問い合わせ
 
 【お問い合わせ種別】
 ${inquiryTypeLabel}
@@ -57,7 +57,7 @@ ${data.message}
     if (resend && process.env.CONTACT_EMAIL) {
       try {
         await resend.emails.send({
-          from: 'BrummBooo Driving Society <noreply@alter-classimo.com>',
+          from: 'Brumm Booo Driving Society <noreply@alter-classimo.com>',
           to: process.env.CONTACT_EMAIL,
           reply_to: data.email,
           subject: `【お問い合わせ】${inquiryTypeLabel} - ${data.name}`,

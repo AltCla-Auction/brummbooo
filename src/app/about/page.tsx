@@ -7,11 +7,11 @@ import { missionContent } from '@/content/mission';
 export const metadata: Metadata = {
   title: '設立意旨',
   description:
-    'Brumm Booo Driving Society の設立意旨。チャイルドシートの普及が進む中、ジュニアシートや正しい座り方への正しい情報を、未来を担うお子様のために届ける活動です。',
+    'Brumm Booo Driving Society の設立意旨。社会貢献活動を行う任意団体として、未来を担う子どもたちを守るために正しい情報を届ける活動です。',
   openGraph: {
     title: '設立意旨｜Brumm Booo Driving Society',
     description:
-      '未来を担う大切なお子様へ、正しい情報を届ける。子どものセーフコクピット・プロジェクトの設立意旨です。',
+      '未来を担う子どもたちを守るために、正しい情報を届ける。子どものセーフコクピット・プロジェクトの設立意旨です。',
   },
 };
 

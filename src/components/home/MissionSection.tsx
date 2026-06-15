@@ -14,7 +14,7 @@ export function MissionSection() {
         <SectionHeader
           id="mission-heading"
           title="なぜ、この活動を始めたのか"
-          subtitle="チャイルドシートの普及は進んできました。それでも、ジュニアシートの利用や正しい座り方は、まだ十分に届いていません。未来を担う大切なお子様へ、正しい情報を届ける——それが Brumm Booo Driving Society の出発点です。"
+          subtitle="チャイルドシートの普及は進んできました。それでも、ジュニアシートの利用や正しい座り方は、まだ十分に届いていません。未来を担う子どもたちを守るために、正しい情報を届ける——それが Brumm Booo Driving Society の出発点です。"
           align="center"
         />
 

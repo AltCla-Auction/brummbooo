@@ -8,12 +8,19 @@ import { Button } from '@/components/ui';
 import { contactFormSchema, type ContactFormInput } from '@/lib/validations';
 import { INQUIRY_TYPE_LABELS, type InquiryType } from '@/types';
 
-const inquiryTypes = Object.entries(INQUIRY_TYPE_LABELS) as [
-  InquiryType,
-  string
-][];
+const activeInquiryTypes: InquiryType[] = [
+  'cooperate',
+  'event',
+  'sticker',
+  'media',
+  'other',
+];
 
-export function ContactForm() {
+interface ContactFormProps {
+  defaultInquiryType?: string;
+}
+
+export function ContactForm({ defaultInquiryType }: ContactFormProps) {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -24,6 +31,11 @@ export function ContactForm() {
     formState: { errors },
   } = useForm<ContactFormInput>({
     resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      inquiryType: activeInquiryTypes.includes(defaultInquiryType as InquiryType)
+        ? (defaultInquiryType as InquiryType)
+        : undefined,
+    },
   });
 
   const onSubmit = async (data: ContactFormInput) => {
@@ -72,9 +84,9 @@ export function ContactForm() {
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-colors bg-white"
         >
           <option value="">選択してください</option>
-          {inquiryTypes.map(([value, label]) => (
+          {activeInquiryTypes.map((value) => (
             <option key={value} value={value}>
-              {label}
+              {INQUIRY_TYPE_LABELS[value]}
             </option>
           ))}
         </select>

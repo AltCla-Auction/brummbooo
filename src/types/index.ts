@@ -37,11 +37,14 @@ export interface ReportInput {
 export type ReportListItem = Omit<Report, 'content'>;
 
 export type InquiryType =
+  | 'cooperate'
+  | 'event'
+  | 'sticker'
+  | 'media'
+  | 'other'
   | 'provide'
   | 'install'
-  | 'receive'
-  | 'media'
-  | 'other';
+  | 'receive';
 
 export interface ContactFormData {
   inquiryType: InquiryType;
@@ -85,11 +88,14 @@ export const CATEGORY_LABELS: Record<ReportCategory, string> = {
 };
 
 export const INQUIRY_TYPE_LABELS: Record<InquiryType, string> = {
-  provide: 'おもちゃを提供したい',
-  install: 'リレーボックスを設置したい',
-  receive: '提供先として相談したい',
+  cooperate: '活動に協力したい',
+  event: 'イベント開催を相談したい',
+  sticker: 'シール配布について問い合わせる',
   media: '取材・連携について',
   other: 'その他',
+  provide: 'おもちゃを提供したい（旧）',
+  install: 'リレーボックスを設置したい（旧）',
+  receive: '提供先として相談したい（旧）',
 };
 
 export const STATUS_LABELS: Record<ReportStatus, string> = {

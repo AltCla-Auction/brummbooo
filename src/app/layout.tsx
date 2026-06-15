@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s | Brumm Booo Driving Society',
   },
   description:
-    '子どもの体に合った安全な席づくりを広げる、Brumm Booo Driving Society の社会活動。チャイルドシート、ジュニアシート、後席シートベルトを親子で見直すきっかけを届けます。',
+    '社会貢献活動を行う任意団体 Brumm Booo Driving Society。子どもの体に合った安全な席づくりを広げ、チャイルドシート、ジュニアシート、後席シートベルトを親子で見直すきっかけを届けます。',
   keywords: [
     'チャイルドシート',
     'ジュニアシート',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: 'Brumm Booo Driving Society',
     title: '子どものセーフコクピット・プロジェクト｜Brumm Booo Driving Society',
     description:
-      '子どもの体に合った安全な席づくりを広げる、Brumm Booo Driving Society の社会活動。チャイルドシート、ジュニアシート、後席シートベルトを親子で見直すきっかけを届けます。',
+      '社会貢献活動を行う任意団体 Brumm Booo Driving Society。子どもの体に合った安全な席づくりを広げ、チャイルドシート、ジュニアシート、後席シートベルトを親子で見直すきっかけを届けます。',
     images: [
       {
         url: '/images/og-image.jpg',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '子どものセーフコクピット・プロジェクト｜Brumm Booo Driving Society',
     description:
-      '子どもの体に合った安全な席づくりを広げる、Brumm Booo Driving Society の社会活動。',
+      '社会貢献活動を行う任意団体 Brumm Booo Driving Society。子どもの体に合った安全な席づくりを広げます。',
     images: ['/images/og-image.jpg'],
   },
   robots: {

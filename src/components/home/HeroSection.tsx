@@ -25,19 +25,19 @@ export function HeroSection() {
               id="hero-heading"
               className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold text-navy leading-snug text-balance"
             >
-              「あの時、ちゃんと合う席にしておけばよかった。」
+              「あの時、ちゃんと合う車のシートにしておけばよかった。」
               <br />
               <span className="text-orange-dark">そんな後悔を、なくしたい。</span>
             </h1>
 
             <p className="mt-6 text-base sm:text-lg text-gray-700 leading-relaxed text-pretty">
               チャイルドシート、ジュニアシート、後席シートベルト。
-              子どもの席は、年齢だけでなく、身長や体格に合っていることが大切です。
-              Brumm Booo Driving Society は、社会貢献活動を行う任意団体として、子どもの体に合った&ldquo;安全な席&rdquo;を親子で見直す取り組みを進めています。
+              子どもの車のシートは、年齢だけでなく、身長や体格に合っていることが大切です。
+              Brumm Booo Driving Society は、社会貢献活動を行う任意団体として、子どもの体に合った&ldquo;安全な車のシート&rdquo;を親子で見直す取り組みを進めています。
             </p>
 
             <p className="mt-6 text-lg sm:text-xl font-semibold text-navy">
-              その席、本当にその子に合っていますか？
+              その車のシート、本当にその子に合っていますか？
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">

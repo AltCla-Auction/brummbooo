@@ -20,7 +20,7 @@ export function ParticipateSection() {
         />
 
         <p className="text-center text-white/85 leading-relaxed text-pretty max-w-2xl mx-auto mb-10">
-          Brumm Booo Driving Society では、子どもの安全な席づくりを広げるため、地域イベント、ディーラー、整備工場、保育園・幼稚園、子育て支援団体、企業との連携を検討しています。
+          Brumm Booo Driving Society では、子どもの安全な車のシートづくりを広げるため、地域イベント、ディーラー、整備工場、保育園・幼稚園、子育て支援団体、企業との連携を検討しています。
         </p>
 
         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">

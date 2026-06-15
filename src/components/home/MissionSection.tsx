@@ -39,7 +39,7 @@ export function MissionSection() {
 
         <div className="max-w-2xl mx-auto space-y-5 text-gray-700 leading-relaxed text-pretty text-center">
           <p>
-            子どもが後ろの席に座り、シートベルトをしていても、体に合っていなければ十分に守れないことがあります。
+            子どもが後ろの車のシートに座り、シートベルトをしていても、体に合っていなければ十分に守れないことがあります。
             本来防げたはずの痛ましい事故も、報告されています。
           </p>
           <p>
@@ -51,7 +51,7 @@ export function MissionSection() {
         <aside className="mt-10 max-w-2xl mx-auto bg-white rounded-xl border border-orange/20 p-6 sm:p-8 shadow-sm">
           <p className="text-navy leading-relaxed text-pretty text-center">
             Brumm Booo Driving Society は、親を責めるための活動ではありません。
-            「うちの子には、今の席で本当に合っているかな？」と見直すきっかけを届ける活動です。
+            「うちの子には、今の車のシートで本当に合っているかな？」と見直すきっかけを届ける活動です。
           </p>
         </aside>
 

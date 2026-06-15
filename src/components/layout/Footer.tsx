@@ -24,7 +24,7 @@ export function Footer() {
               子どものセーフコクピット・プロジェクト
             </p>
             <p className="mt-3 text-sm text-white/70 leading-relaxed text-pretty max-w-md">
-              「あの時、ちゃんと合う席にしておけばよかった。」そんな後悔を、なくしたい。
+              「あの時、ちゃんと合う車のシートにしておけばよかった。」そんな後悔を、なくしたい。
             </p>
           </div>
 

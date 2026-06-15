@@ -18,6 +18,20 @@ export const SUPPORTER_ROLE_LABELS: Record<SupporterRole, string> = {
   partner: 'パートナー',
 };
 
+/** アルファベット表記を50音表記より先に並べる */
+function getSortGroup(name: string): 0 | 1 {
+  const firstChar = name.trim()[0];
+  return /[A-Za-z0-9]/.test(firstChar) ? 0 : 1;
+}
+
+export function sortSupporters(items: Supporter[]): Supporter[] {
+  return [...items].sort((a, b) => {
+    const groupDiff = getSortGroup(a.name) - getSortGroup(b.name);
+    if (groupDiff !== 0) return groupDiff;
+    return a.name.localeCompare(b.name, 'ja', { sensitivity: 'base' });
+  });
+}
+
 export const supporters: Supporter[] = [
   {
     id: 'allcompass',
@@ -29,9 +43,23 @@ export const supporters: Supporter[] = [
     websiteUrl: 'https://allcompass.jp',
     message: `Brumm Booo Driving Society の事務局運営を担っています。
 
-自動車業界に携わる中で、クルマは家族の日常と深く結びついている——その実感から、子どもの安全な席づくりは社会全体で見直すべきテーマだと考えました。
+自動車業界に携わる中で、クルマは家族の日常と深く結びついている——その実感から、子どもの安全な車のシートづくりは社会全体で見直すべきテーマだと考えました。
 
 装着診断や安全認定を行う団体ではありませんが、正しい情報にたどり着く入口づくりと、親子で続けやすい習慣づくりを、社会貢献活動として支援しています。`,
+  },
+  {
+    id: 'jds-international',
+    role: 'supporter',
+    roleLabel: 'サポーター',
+    name: 'JDSインターナショナル',
+    logoSrc: '/images/jds-international-logo.png',
+    logoAlt: 'JDSインターナショナル',
+    websiteUrl: 'https://jds-int.com/',
+    message: `JDSインターナショナルは、プロドライバーの派遣・運転支援に携わる企業として、「子どものセーフコクピット・プロジェクト」をサポートしています。
+
+クルマの安全は、運転技術だけでなく、同乗する子どもの体に合ったシート環境から始まります。
+
+親子のドライブがより安全で楽しい時間になるよう、正しい情報の周知と見直しのきっかけづくりに賛同しています。`,
   },
   {
     id: 'altcla',

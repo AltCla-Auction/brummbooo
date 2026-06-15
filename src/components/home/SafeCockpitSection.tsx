@@ -15,7 +15,7 @@ export function SafeCockpitSection() {
         <SectionHeader
           id="safe-cockpit-heading"
           title="セーフコクピットとは？"
-          subtitle="正しい情報を家庭に届けるための考え方です。チャイルドシートやジュニアシート、後席シートベルト、座り方——子どもに合った「安全な席」を、ひとつの概念として捉えます。"
+          subtitle="正しい情報を家庭に届けるための考え方です。チャイルドシートやジュニアシート、後席シートベルト、座り方——子どもに合った「安全な車のシート」を、ひとつの概念として捉えます。"
           align="center"
         />
 

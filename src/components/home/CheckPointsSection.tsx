@@ -27,7 +27,7 @@ export function CheckPointsSection() {
         <ul
           className="max-w-3xl mx-auto space-y-3 list-none p-0 m-0"
           role="list"
-          aria-label="安全な席のチェックポイント"
+          aria-label="安全な車のシートのチェックポイント"
         >
           {CHECK_POINTS.map((item, index) => {
             const isOpen = openId === item.id;

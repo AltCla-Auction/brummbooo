@@ -19,7 +19,7 @@ export function ParentInfoSection() {
         />
 
         <p className="max-w-2xl mx-auto text-center text-gray-700 leading-relaxed text-pretty mb-10 sm:mb-12">
-          Brumm Booo Driving Society では、子どもの安全な席づくりに関する情報を、保護者にわかりやすく届けます。
+          Brumm Booo Driving Society では、子どもの安全な車のシートづくりに関する情報を、保護者にわかりやすく届けます。
           専門的な判断が必要な場合は、警察庁、JAF、メーカー、販売店、用品店などの一次情報や専門窓口を確認することを推奨します。
         </p>
 

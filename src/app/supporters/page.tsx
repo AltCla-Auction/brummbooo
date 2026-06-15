@@ -3,12 +3,12 @@ import Link from 'next/link';
 import { Container, Section, PageHeader } from '@/components/ui';
 import { Button } from '@/components/ui/Button';
 import { SupporterList } from '@/components/supporters';
-import { supporters, supportersPageContent } from '@/content/supporters';
+import { supporters, supportersPageContent, sortSupporters } from '@/content/supporters';
 
 export const metadata: Metadata = {
   title: 'サポーター・パートナー',
   description:
-    '子どものセーフコクピット・プロジェクトに賛同する運営会社・サポーター・パートナーをご紹介します。オールコンパス株式会社、オルクラなど。',
+    '子どものセーフコクピット・プロジェクトに賛同する運営会社・サポーター・パートナーをご紹介します。JDSインターナショナル、オルクラ、オールコンパス株式会社など。',
   openGraph: {
     title: 'サポーター・パートナー｜Brumm Booo Driving Society',
     description:
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 };
 
 export default function SupportersPage() {
-  const operators = supporters.filter((s) => s.role === 'operator');
-  const supportersOnly = supporters.filter((s) => s.role === 'supporter');
-  const partners = supporters.filter((s) => s.role === 'partner');
+  const operators = sortSupporters(supporters.filter((s) => s.role === 'operator'));
+  const supportersOnly = sortSupporters(supporters.filter((s) => s.role === 'supporter'));
+  const partners = sortSupporters(supporters.filter((s) => s.role === 'partner'));
 
   return (
     <>

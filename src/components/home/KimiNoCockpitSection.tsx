@@ -18,7 +18,7 @@ export function KimiNoCockpitSection() {
 
         <p className="max-w-2xl mx-auto text-center text-gray-700 leading-relaxed text-pretty mb-10">
           子どもにとって、チャイルドシートやジュニアシートは「座らされる場所」になりがちです。
-          Brumm Booo Driving Society では、その席を「きみのコクピット」として楽しめるように、名前を書けるシールやカードを使った取り組みを進めます。
+          Brumm Booo Driving Society では、その車のシートを「きみのコクピット」として楽しめるように、名前を書けるシールやカードを使った取り組みを進めます。
         </p>
 
         <div className="max-w-xl mx-auto text-center mb-12">

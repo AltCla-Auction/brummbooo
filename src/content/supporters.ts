@@ -10,6 +10,8 @@ export interface Supporter {
   logoOnDark?: boolean;
   websiteUrl?: string;
   message: string;
+  /** true の場合、同区分内で最後に表示 */
+  sortLast?: boolean;
 }
 
 export const SUPPORTER_ROLE_LABELS: Record<SupporterRole, string> = {
@@ -41,6 +43,8 @@ function getSortGroup(name: string): 0 | 1 {
 
 export function sortSupporters(items: Supporter[]): Supporter[] {
   return [...items].sort((a, b) => {
+    if (a.sortLast !== b.sortLast) return a.sortLast ? 1 : -1;
+
     const groupDiff = getSortGroup(a.name) - getSortGroup(b.name);
     if (groupDiff !== 0) return groupDiff;
     return a.name.localeCompare(b.name, 'ja', { sensitivity: 'base' });
@@ -84,11 +88,14 @@ export const supporters: Supporter[] = [
     logoSrc: '/images/altcla-logo.png',
     logoAlt: 'オルクラ',
     websiteUrl: 'https://alter-classimo.com',
-    message: `クルマを楽しみ、大切に乗り続ける文化を広げるサービスとして、子どものセーフコクピット・プロジェクトをサポートしています。
+    sortLast: true,
+    message: `Brumm Booo Driving Society の事務局であるオールコンパス株式会社が運営するオルクラは、クルマを楽しみ、大切に乗り続ける文化を広げるサービスです。「子どものセーフコクピット・プロジェクト」においても、パートナーとして活動に賛同しています。
 
-「座っているから大丈夫」では、子どもを守りきれない場合があるという現実に、クルマと向き合うブランドとして対応すべきだと考えています。
+オルクラが大切にしているのは、クルマとの関わりを通じて、より多くの方に「自分のクルマを好きになる」きっかけを届けることです。その延長線上に、同乗する子どもたちの安全な車のシートづくりがあります。楽しく乗り続けるためには、日々の移動の安心が欠かせません。
 
-未来を担う子どもたちが、毎日の移動をより安全に過ごせるよう、正しい情報の周知と、家庭での見直しのきっかけづくりとして一緒に活動します。`,
+「座っているから大丈夫」では、子どもを守りきれない場合がある——そうした現実に、クルマと向き合うブランドとして対応すべきだと考えています。
+
+未来を担う子どもたちが、毎日の移動をより安全に過ごせるよう、正しい情報の周知と、家庭での見直しのきっかけづくりに、事務局運営サービスとしても一緒に取り組んでいきます。`,
   },
   {
     id: 'monkey-production',

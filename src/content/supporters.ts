@@ -90,6 +90,20 @@ export const supporters: Supporter[] = [
 
 未来を担う子どもたちが、毎日の移動をより安全に過ごせるよう、正しい情報の周知と、家庭での見直しのきっかけづくりとして一緒に活動します。`,
   },
+  {
+    id: 'monkey-production',
+    role: 'partner',
+    roleLabel: 'パートナー',
+    name: 'モンキープロダクション',
+    logoSrc: '/images/monkey-production-logo.png',
+    logoAlt: 'モンキープロダクション',
+    websiteUrl: 'https://monkey-pro.com/',
+    message: `モンキープロダクションは、クルマに関わるコンテンツの制作・発信に携わる立場から、「子どものセーフコクピット・プロジェクト」に賛同しています。
+
+子どもたちの体格や成長にあわせて、クルマのシートを見直すことは、親子のドライブをより安心で楽しい時間にするための第一歩です。
+
+この活動が多くのご家庭に届くよう、情報発信の面から応援していきます。`,
+  },
 ];
 
 export const supportersPageContent = {

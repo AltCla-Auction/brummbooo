@@ -30,10 +30,14 @@ export function HeroSection() {
               <span className="text-orange-dark">そんな後悔を、なくしたい。</span>
             </h1>
 
+            <p className="mt-5 text-xl sm:text-2xl font-bold text-navy tracking-tight">
+              子どものセーフコクピット・プロジェクト
+            </p>
+
             <p className="mt-6 text-base sm:text-lg text-gray-700 leading-relaxed text-pretty">
               チャイルドシート、ジュニアシート、後席シートベルト。
               子どもの車のシートは、年齢だけでなく、身長や体格に合っていることが大切です。
-              Brumm Booo Driving Society は、社会貢献活動を行う任意団体として、子どもの体に合った&ldquo;安全な車のシート&rdquo;を親子で見直す取り組みを進めています。
+              Brumm Booo Driving Society は、社会貢献活動を行う任意団体として、このプロジェクトを通じて、子どもの体に合った&ldquo;安全な車のシート&rdquo;を親子で見直す取り組みを進めています。
             </p>
 
             <p className="mt-6 text-lg sm:text-xl font-semibold text-navy">

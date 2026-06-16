@@ -97,6 +97,7 @@ export const supporters: Supporter[] = [
     name: 'モンキープロダクション',
     logoSrc: '/images/monkey-production-logo.png',
     logoAlt: 'モンキープロダクション',
+    logoOnDark: true,
     websiteUrl: 'https://monkey-pro.com/',
     message: `モンキープロダクションは、クルマに関わるコンテンツの制作・発信に携わる立場から、「子どものセーフコクピット・プロジェクト」に賛同しています。
 

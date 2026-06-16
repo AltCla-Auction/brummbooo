@@ -21,26 +21,33 @@ export function HeroSection() {
               Brumm Booo Driving Society presents
             </p>
 
+            <div className="mt-4 space-y-2 max-w-xl">
+              <p className="text-base sm:text-lg text-gray-800 leading-relaxed text-pretty">
+                あの時、ちゃんと合う車のシートにしておけばよかった。
+              </p>
+              <p className="text-base sm:text-lg font-semibold text-orange-dark leading-relaxed text-pretty">
+                そんな後悔を、なくしたい。
+              </p>
+            </div>
+
             <h1
               id="hero-heading"
-              className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold text-navy leading-snug text-balance"
+              className="mt-6 text-xl sm:text-2xl lg:text-3xl font-bold text-navy leading-snug tracking-tight"
             >
-              「あの時、ちゃんと合う車のシートにしておけばよかった。」
-              <br />
-              <span className="text-orange-dark">そんな後悔を、なくしたい。</span>
+              子どものセーフコクピット・プロジェクト
             </h1>
 
-            <p className="mt-5 text-xl sm:text-2xl font-bold text-navy tracking-tight">
-              子どものセーフコクピット・プロジェクト
-            </p>
+            <div className="mt-5 space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed text-pretty max-w-xl">
+              <p>
+                チャイルドシート、ジュニアシート、後席シートベルト。
+                子どもの車のシートは、年齢だけでなく、身長や体格に合っていることが大切です。
+              </p>
+              <p>
+                Brumm Booo Driving Society は、社会貢献活動を行う任意団体として、このプロジェクトを通じて、子どもの体に合った&ldquo;安全な車のシート&rdquo;を親子で見直す取り組みを進めています。
+              </p>
+            </div>
 
-            <p className="mt-6 text-base sm:text-lg text-gray-700 leading-relaxed text-pretty">
-              チャイルドシート、ジュニアシート、後席シートベルト。
-              子どもの車のシートは、年齢だけでなく、身長や体格に合っていることが大切です。
-              Brumm Booo Driving Society は、社会貢献活動を行う任意団体として、このプロジェクトを通じて、子どもの体に合った&ldquo;安全な車のシート&rdquo;を親子で見直す取り組みを進めています。
-            </p>
-
-            <p className="mt-6 text-lg sm:text-xl font-semibold text-navy">
+            <p className="mt-5 text-base sm:text-lg font-semibold text-navy max-w-xl">
               その車のシート、本当にその子に合っていますか？
             </p>
 

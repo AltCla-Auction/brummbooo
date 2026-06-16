@@ -21,11 +21,11 @@ export function HeroSection() {
               Brumm Booo Driving Society presents
             </p>
 
-            <div className="mt-4 space-y-2 max-w-xl">
-              <p className="text-base sm:text-lg text-gray-800 leading-relaxed text-pretty">
+            <div className="mt-4 space-y-2">
+              <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-pretty">
                 あの時、ちゃんと合う車のシートにしておけばよかった。
               </p>
-              <p className="text-base sm:text-lg font-semibold text-orange-dark leading-relaxed text-pretty">
+              <p className="text-lg sm:text-xl font-semibold text-orange-dark leading-relaxed text-pretty">
                 そんな後悔を、なくしたい。
               </p>
             </div>
@@ -34,7 +34,8 @@ export function HeroSection() {
               id="hero-heading"
               className="mt-6 text-xl sm:text-2xl lg:text-3xl font-bold text-navy leading-snug tracking-tight"
             >
-              子どものセーフコクピット・プロジェクト
+              <span className="block">子どものセーフコクピット・</span>
+              <span className="block whitespace-nowrap">プロジェクト</span>
             </h1>
 
             <div className="mt-5 space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed text-pretty max-w-xl">

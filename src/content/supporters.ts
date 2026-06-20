@@ -105,6 +105,20 @@ export const supporters: Supporter[] = [
 
 この活動が多くのご家庭に届くよう、情報発信の面から応援していきます。`,
   },
+  {
+    id: 'plus-sports',
+    role: 'partner',
+    roleLabel: 'パートナー',
+    name: 'プラス・スポーツ',
+    logoSrc: '/images/plus-sports-logo.png',
+    logoAlt: 'プラス・スポーツ',
+    websiteUrl: 'https://plus-sports.co.jp/',
+    message: `プラス・スポーツは、福岡でクルマを扱う企業として、「子どものセーフコクピット・プロジェクト」に賛同しています。
+
+私たちは、クルマを販売するだけでなく、地域の皆さまの安心・安全なカーライフを支えることも大切な役割だと考えています。
+
+子どもの体に合ったシート環境について知り、見直すきっかけを広げることで、地域の親御さんの意識向上につながる活動を応援していきます。`,
+  },
 ];
 
 export const supportersPageContent = {

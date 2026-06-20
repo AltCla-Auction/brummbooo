@@ -12,7 +12,7 @@ import { supporters, supportersPageContent, sortSupporters } from '@/content/sup
 export const metadata: Metadata = {
   title: 'サポーター・パートナー',
   description:
-    '子どものセーフコクピット・プロジェクトに賛同するパートナー（企業・団体）・サポーター（個人）をご紹介します。JDSインターナショナル、モンキープロダクション、オルクラ、オールコンパス株式会社など。',
+    '子どものセーフコクピット・プロジェクトに賛同するパートナー（企業・団体）・サポーター（個人）をご紹介します。JDSインターナショナル、モンキープロダクション、プラス・スポーツ、オルクラ、オールコンパス株式会社など。',
   openGraph: {
     title: 'サポーター・パートナー｜Brumm Booo Driving Society',
     description:

@@ -110,7 +110,7 @@ export const supporters: Supporter[] = [
     role: 'partner',
     roleLabel: 'パートナー',
     name: 'プラス・スポーツ',
-    logoSrc: '/images/plus-sports-logo.png',
+    logoSrc: '/images/plus-sports-logo.jpg',
     logoAlt: 'プラス・スポーツ',
     websiteUrl: 'https://plus-sports.co.jp/',
     message: `プラス・スポーツは、福岡でクルマを扱う企業として、「子どものセーフコクピット・プロジェクト」に賛同しています。
